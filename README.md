@@ -1,6 +1,8 @@
+***dunestorm333:*** My branch simply contains an updated icon set, I plan to make a couple other UI changes in the future.
+
 # [Game Backup Monitor](http://mikemaximus.github.io/gbm-web/)
 
-![Screenshot](http://mikemaximus.github.io/gbm-web/images/manual/manual_01.jpg)
+![Screenshot](https://i.imgur.com/VgREJks.png)
 
 Game Backup Monitor is a simple, but flexible application that detects games as you play them.  Once you finish playing a game, a backup of the saved games will be made automatically using 7-Zip compression.  GBM can be used on a single computer, or on multiple computers to effectively add cloud support to any game or application.
 
