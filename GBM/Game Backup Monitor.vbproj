@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\clsGameProcess.vb" />
+    <Compile Include="Managers\mgrThemeEngine.vb" />
     <Compile Include="Classes\clsWineData.vb" />
     <Compile Include="Classes\clsProcess.vb" />
     <Compile Include="Classes\clsGameFilter.vb" />

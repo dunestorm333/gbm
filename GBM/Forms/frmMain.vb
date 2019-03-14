@@ -1564,6 +1564,25 @@ Public Class frmMain
         pbTime.Image = Icon_Clock
         AddHandler mgrMonitorList.UpdateLog, AddressOf UpdateLog
         ResetGameInfo()
+
+        'Initialise theme engine
+        Dim oThemeEngine As New mgrThemeEngine
+        oThemeEngine.SetTheme(mgrThemeEngine.eTheme.Dark)
+        BackColor = oThemeEngine.colBase
+        gMonMainMenu.BackColor = oThemeEngine.colBase
+        gMonMainMenu.ForeColor = oThemeEngine.colHighlightAlt
+        gMonStatusStrip.BackColor = oThemeEngine.colBase
+        gMonStripTxtStatus.ForeColor = oThemeEngine.colHightlight
+        gMonStripStatusButton.ForeColor = oThemeEngine.colHightlight
+        lblGameTitle.ForeColor = oThemeEngine.colHightlight
+        lblStatus1.ForeColor = oThemeEngine.colHightlight
+        lblStatus2.ForeColor = oThemeEngine.colHightlight
+        lblStatus3.ForeColor = oThemeEngine.colHightlight
+        lblTimeSpent.ForeColor = oThemeEngine.colHightlight
+        lblLastActionTitle.ForeColor = oThemeEngine.colHightlight
+        lblLastAction.ForeColor = oThemeEngine.colHightlight
+        txtLog.BackColor = oThemeEngine.colBaseAlt
+        txtLog.ForeColor = oThemeEngine.colHightlight
     End Sub
 
     Private Function BuildChildProcesses() As Integer

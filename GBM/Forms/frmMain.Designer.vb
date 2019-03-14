@@ -34,9 +34,9 @@ Partial Class frmMain
         Me.gMonTraySetup = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonTraySetupAddWizard = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonTraySetupGameManager = New System.Windows.Forms.ToolStripMenuItem()
-        Me.gMonTraySetupCustomVariables = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonTraySetupTags = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonTraySetupProcessManager = New System.Windows.Forms.ToolStripMenuItem()
+        Me.gMonTraySetupCustomVariables = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonTrayTools = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonTrayToolsCompact = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonTrayToolsLog = New System.Windows.Forms.ToolStripMenuItem()
@@ -64,9 +64,9 @@ Partial Class frmMain
         Me.gMonSetup = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonSetupGameManager = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonSetupAddWizard = New System.Windows.Forms.ToolStripMenuItem()
-        Me.gMonSetupCustomVariables = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonSetupTags = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonSetupProcessManager = New System.Windows.Forms.ToolStripMenuItem()
+        Me.gMonSetupCustomVariables = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonTools = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonToolsCompact = New System.Windows.Forms.ToolStripMenuItem()
         Me.gMonToolsLog = New System.Windows.Forms.ToolStripMenuItem()
@@ -162,12 +162,6 @@ Partial Class frmMain
         Me.gMonTraySetupGameManager.Size = New System.Drawing.Size(201, 22)
         Me.gMonTraySetupGameManager.Text = "&Game Manager..."
         '
-        'gMonTraySetupCustomVariables
-        '
-        Me.gMonTraySetupCustomVariables.Name = "gMonTraySetupCustomVariables"
-        Me.gMonTraySetupCustomVariables.Size = New System.Drawing.Size(201, 22)
-        Me.gMonTraySetupCustomVariables.Text = "Custom Path &Variables..."
-        '
         'gMonTraySetupTags
         '
         Me.gMonTraySetupTags.Name = "gMonTraySetupTags"
@@ -179,6 +173,12 @@ Partial Class frmMain
         Me.gMonTraySetupProcessManager.Name = "gMonTraySetupProcessManager"
         Me.gMonTraySetupProcessManager.Size = New System.Drawing.Size(201, 22)
         Me.gMonTraySetupProcessManager.Text = "&Process Manager..."
+        '
+        'gMonTraySetupCustomVariables
+        '
+        Me.gMonTraySetupCustomVariables.Name = "gMonTraySetupCustomVariables"
+        Me.gMonTraySetupCustomVariables.Size = New System.Drawing.Size(201, 22)
+        Me.gMonTraySetupCustomVariables.Text = "Custom Path &Variables..."
         '
         'gMonTrayTools
         '
@@ -270,6 +270,7 @@ Partial Class frmMain
         '
         'gMonStatusStrip
         '
+        Me.gMonStatusStrip.BackColor = System.Drawing.Color.Transparent
         Me.gMonStatusStrip.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gMonStatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.gMonStripAdminButton, Me.gMonStripTxtStatus, Me.gMonStripStatusButton})
         Me.gMonStatusStrip.Location = New System.Drawing.Point(0, 379)
@@ -291,7 +292,7 @@ Partial Class frmMain
         '
         Me.gMonStripTxtStatus.Margin = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.gMonStripTxtStatus.Name = "gMonStripTxtStatus"
-        Me.gMonStripTxtStatus.Size = New System.Drawing.Size(400, 22)
+        Me.gMonStripTxtStatus.Size = New System.Drawing.Size(369, 22)
         Me.gMonStripTxtStatus.Spring = True
         Me.gMonStripTxtStatus.Text = "Monitor Status"
         Me.gMonStripTxtStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -308,7 +309,7 @@ Partial Class frmMain
         Me.gMonMainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.gMonFile, Me.gMonSetup, Me.gMonTools, Me.gMonHelp, Me.gMonNotification})
         Me.gMonMainMenu.Location = New System.Drawing.Point(0, 0)
         Me.gMonMainMenu.Name = "gMonMainMenu"
-        Me.gMonMainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.gMonMainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.gMonMainMenu.Size = New System.Drawing.Size(524, 24)
         Me.gMonMainMenu.TabIndex = 0
         Me.gMonMainMenu.Text = "MenuStrip1"
@@ -367,12 +368,6 @@ Partial Class frmMain
         Me.gMonSetupAddWizard.Size = New System.Drawing.Size(201, 22)
         Me.gMonSetupAddWizard.Text = "Add Game &Wizard..."
         '
-        'gMonSetupCustomVariables
-        '
-        Me.gMonSetupCustomVariables.Name = "gMonSetupCustomVariables"
-        Me.gMonSetupCustomVariables.Size = New System.Drawing.Size(201, 22)
-        Me.gMonSetupCustomVariables.Text = "Custom Path &Variables..."
-        '
         'gMonSetupTags
         '
         Me.gMonSetupTags.Name = "gMonSetupTags"
@@ -384,6 +379,12 @@ Partial Class frmMain
         Me.gMonSetupProcessManager.Name = "gMonSetupProcessManager"
         Me.gMonSetupProcessManager.Size = New System.Drawing.Size(201, 22)
         Me.gMonSetupProcessManager.Text = "&Process Manager..."
+        '
+        'gMonSetupCustomVariables
+        '
+        Me.gMonSetupCustomVariables.Name = "gMonSetupCustomVariables"
+        Me.gMonSetupCustomVariables.Size = New System.Drawing.Size(201, 22)
+        Me.gMonSetupCustomVariables.Text = "Custom Path &Variables..."
         '
         'gMonTools
         '

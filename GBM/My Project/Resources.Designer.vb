@@ -6826,6 +6826,42 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to 0,0,0.
+        '''</summary>
+        Friend ReadOnly Property mgrThemeEngine_Color_Black() As String
+            Get
+                Return ResourceManager.GetString("mgrThemeEngine_Color_Black", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 0,131,255.
+        '''</summary>
+        Friend ReadOnly Property mgrThemeEngine_Color_Blue() As String
+            Get
+                Return ResourceManager.GetString("mgrThemeEngine_Color_Blue", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 25,25,25.
+        '''</summary>
+        Friend ReadOnly Property mgrThemeEngine_Color_Dark() As String
+            Get
+                Return ResourceManager.GetString("mgrThemeEngine_Color_Dark", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 255,255,255.
+        '''</summary>
+        Friend ReadOnly Property mgrThemeEngine_Color_White() As String
+            Get
+                Return ResourceManager.GetString("mgrThemeEngine_Color_White", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to An error occured exporting the XML data.[BR][BR][PARAM].
         '''</summary>
         Friend ReadOnly Property mgrXML_ErrorExportFailure() As String
