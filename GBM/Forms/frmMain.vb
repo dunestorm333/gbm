@@ -1566,8 +1566,13 @@ Public Class frmMain
         ResetGameInfo()
 
         'Initialise theme engine
+        InitThemeEngine()
+    End Sub
+
+    Private Sub InitThemeEngine()
         Dim oThemeEngine As New mgrThemeEngine
-        oThemeEngine.SetTheme(mgrThemeEngine.eTheme.Dark)
+        oThemeEngine.SetTheme(mgrThemeEngine.eBaseTheme.Light) 'Will ultimately be changable via UI
+
         BackColor = oThemeEngine.colBase
         gMonMainMenu.BackColor = oThemeEngine.colBase
         gMonMainMenu.ForeColor = oThemeEngine.colHighlightAlt

@@ -6826,38 +6826,74 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 0,0,0.
-        '''</summary>
-        Friend ReadOnly Property mgrThemeEngine_Color_Black() As String
-            Get
-                Return ResourceManager.GetString("mgrThemeEngine_Color_Black", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to 0,131,255.
-        '''</summary>
-        Friend ReadOnly Property mgrThemeEngine_Color_Blue() As String
-            Get
-                Return ResourceManager.GetString("mgrThemeEngine_Color_Blue", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to 25,25,25.
         '''</summary>
-        Friend ReadOnly Property mgrThemeEngine_Color_Dark() As String
+        Friend ReadOnly Property mgrThemeEngine_Theme_Dark_Base() As String
             Get
-                Return ResourceManager.GetString("mgrThemeEngine_Color_Dark", resourceCulture)
+                Return ResourceManager.GetString("mgrThemeEngine_Theme_Dark_Base", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 0,0,0.
+        '''</summary>
+        Friend ReadOnly Property mgrThemeEngine_Theme_Dark_BaseAlt() As String
+            Get
+                Return ResourceManager.GetString("mgrThemeEngine_Theme_Dark_BaseAlt", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized string similar to 255,255,255.
         '''</summary>
-        Friend ReadOnly Property mgrThemeEngine_Color_White() As String
+        Friend ReadOnly Property mgrThemeEngine_Theme_Dark_Highlight() As String
             Get
-                Return ResourceManager.GetString("mgrThemeEngine_Color_White", resourceCulture)
+                Return ResourceManager.GetString("mgrThemeEngine_Theme_Dark_Highlight", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 0,131,255.
+        '''</summary>
+        Friend ReadOnly Property mgrThemeEngine_Theme_Dark_HighlightAlt() As String
+            Get
+                Return ResourceManager.GetString("mgrThemeEngine_Theme_Dark_HighlightAlt", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 240,240,240.
+        '''</summary>
+        Friend ReadOnly Property mgrThemeEngine_Theme_Light_Base() As String
+            Get
+                Return ResourceManager.GetString("mgrThemeEngine_Theme_Light_Base", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 255,255,255.
+        '''</summary>
+        Friend ReadOnly Property mgrThemeEngine_Theme_Light_BaseAlt() As String
+            Get
+                Return ResourceManager.GetString("mgrThemeEngine_Theme_Light_BaseAlt", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 0,0,0.
+        '''</summary>
+        Friend ReadOnly Property mgrThemeEngine_Theme_Light_Highlight() As String
+            Get
+                Return ResourceManager.GetString("mgrThemeEngine_Theme_Light_Highlight", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 0,0,0.
+        '''</summary>
+        Friend ReadOnly Property mgrThemeEngine_Theme_Light_HighlightAlt() As String
+            Get
+                Return ResourceManager.GetString("mgrThemeEngine_Theme_Light_HighlightAlt", resourceCulture)
             End Get
         End Property
         

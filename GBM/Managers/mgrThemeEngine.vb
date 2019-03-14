@@ -8,18 +8,48 @@ Public Class mgrThemeEngine
     Public ReadOnly Property colHighlightAlt As Color
 
 
-    Public Enum eTheme
+    ''' <summary>
+    ''' Supported themes.
+    ''' </summary>
+    Public Enum eBaseTheme
         Dark
+        Light
     End Enum
 
-    Public Function SetTheme(thm As eTheme)
+    ''' <summary>
+    ''' Configures the base colors for the overall theme based on input.
+    ''' </summary>
+    ''' <param name="_eBaseTheme"></param>
+    ''' <returns></returns>
+    Public Function SetTheme(_eBaseTheme As eBaseTheme)
         Dim selectedColor As Color
-        Select Case thm
-            Case eTheme.Dark
-                _colBase = New ColorConverter().ConvertFromString(mgrThemeEngine_Color_Dark)
-                _colBaseAlt = New ColorConverter().ConvertFromString(mgrThemeEngine_Color_Black)
-                _colHightlight = New ColorConverter().ConvertFromString(mgrThemeEngine_Color_White)
-                _colHighlightAlt = New ColorConverter().ConvertFromString(mgrThemeEngine_Color_Blue)
+        Select Case _eBaseTheme
+            Case eBaseTheme.Dark
+                _colBase = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_Theme_Dark_Base)
+
+                _colBaseAlt = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_Theme_Dark_BaseAlt)
+
+                _colHightlight = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_Theme_Dark_Highlight)
+
+                _colHighlightAlt = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_Theme_Dark_HighlightAlt)
+
+            Case eBaseTheme.Light
+                _colBase = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_Theme_Light_Base)
+
+                _colBaseAlt = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_Theme_Light_BaseAlt)
+
+                _colHightlight = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_Theme_Light_Highlight)
+
+                _colHighlightAlt = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_Theme_Light_HighlightAlt)
+
         End Select
         Return selectedColor
     End Function

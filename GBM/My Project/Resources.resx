@@ -2374,16 +2374,28 @@
   <data name="mgrCommon_FolderSelection" xml:space="preserve">
     <value>Current Folder</value>
   </data>
-  <data name="mgrThemeEngine_Color_Black" xml:space="preserve">
+  <data name="mgrThemeEngine_Theme_Dark_BaseAlt" xml:space="preserve">
     <value>0,0,0</value>
   </data>
-  <data name="mgrThemeEngine_Color_Blue" xml:space="preserve">
+  <data name="mgrThemeEngine_Theme_Dark_HighlightAlt" xml:space="preserve">
     <value>0,131,255</value>
   </data>
-  <data name="mgrThemeEngine_Color_Dark" xml:space="preserve">
+  <data name="mgrThemeEngine_Theme_Dark_Base" xml:space="preserve">
     <value>25,25,25</value>
   </data>
-  <data name="mgrThemeEngine_Color_White" xml:space="preserve">
+  <data name="mgrThemeEngine_Theme_Dark_Highlight" xml:space="preserve">
     <value>255,255,255</value>
+  </data>
+  <data name="mgrThemeEngine_Theme_Light_Base" xml:space="preserve">
+    <value>240,240,240</value>
+  </data>
+  <data name="mgrThemeEngine_Theme_Light_BaseAlt" xml:space="preserve">
+    <value>255,255,255</value>
+  </data>
+  <data name="mgrThemeEngine_Theme_Light_Highlight" xml:space="preserve">
+    <value>0,0,0</value>
+  </data>
+  <data name="mgrThemeEngine_Theme_Light_HighlightAlt" xml:space="preserve">
+    <value>0,0,0</value>
   </data>
 </root>
