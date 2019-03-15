@@ -969,7 +969,7 @@ Public Class frmMain
             mgrPath.RemoteDatabaseLocation = oSettings.BackupFolder
             SetupSyncWatcher()
             LoadGameSettings()
-            SetAppTheme()
+            LoadInterfaceState()
         End If
         ResumeScan()
     End Sub
@@ -1567,35 +1567,8 @@ Public Class frmMain
         AddHandler mgrMonitorList.UpdateLog, AddressOf UpdateLog
         ResetGameInfo()
 
-        'Initialise theme engine
-        SetAppTheme()
-    End Sub
-
-    Private Sub SetAppTheme()
-        oThemeEngine.SetTheme(oSettings.ThemeSelection)
-
-        'Base Theme
-        BackColor = oThemeEngine.ColorBase
-
-        'Menu/Status Bars
-        gMonMainMenu.BackColor = oThemeEngine.ColorBase
-        gMonMainMenu.ForeColor = oThemeEngine.ColorHighlightSecondary
-        gMonStatusStrip.BackColor = oThemeEngine.ColorBase
-        gMonStripTxtStatus.ForeColor = oThemeEngine.ColorHighlight
-        gMonStripStatusButton.ForeColor = oThemeEngine.ColorHighlight
-
-        'Text Labels
-        lblGameTitle.ForeColor = oThemeEngine.ColorHighlight
-        lblStatus1.ForeColor = oThemeEngine.ColorHighlight
-        lblStatus2.ForeColor = oThemeEngine.ColorHighlight
-        lblStatus3.ForeColor = oThemeEngine.ColorHighlight
-        lblTimeSpent.ForeColor = oThemeEngine.ColorHighlight
-        lblLastActionTitle.ForeColor = oThemeEngine.ColorHighlight
-        lblLastAction.ForeColor = oThemeEngine.ColorHighlight
-
-        'Output Log
-        txtLog.BackColor = oThemeEngine.ColorBaseSecondary
-        txtLog.ForeColor = oThemeEngine.ColorHighlight
+        'Initialise and sets interface customizations
+        LoadInterfaceState()
     End Sub
 
     Private Function BuildChildProcesses() As Integer
@@ -1657,6 +1630,43 @@ Public Class frmMain
             UpdateLog(mgrCommon.FormatString(frmMain_ErrorEndChildProcess, oProcess.GameInfo.CroppedName), True, ToolTipIcon.Error)
             UpdateLog(mgrCommon.FormatString(App_GenericError, ex.Message), False,, False)
         End Try
+    End Sub
+
+    Private Sub LoadInterfaceState()
+#Region "Auto-hide log"
+        If oSettings.AutoHideLog Then
+            Size = New Size(0, 0)
+        Else
+            Size = New Size(0, 440)
+        End If
+#End Region
+
+#Region "Set application theme"
+        oThemeEngine.SetTheme(oSettings.ThemeSelection)
+
+        'Base Theme
+        BackColor = oThemeEngine.ColorBase
+
+        'Menu/Status Bars
+        gMonMainMenu.BackColor = oThemeEngine.ColorBase
+        gMonMainMenu.ForeColor = oThemeEngine.ColorHighlightSecondary
+        gMonStatusStrip.BackColor = oThemeEngine.ColorBase
+        gMonStripTxtStatus.ForeColor = oThemeEngine.ColorHighlight
+        gMonStripStatusButton.ForeColor = oThemeEngine.ColorHighlight
+
+        'Text Labels
+        lblGameTitle.ForeColor = oThemeEngine.ColorHighlight
+        lblStatus1.ForeColor = oThemeEngine.ColorHighlight
+        lblStatus2.ForeColor = oThemeEngine.ColorHighlight
+        lblStatus3.ForeColor = oThemeEngine.ColorHighlight
+        lblTimeSpent.ForeColor = oThemeEngine.ColorHighlight
+        lblLastActionTitle.ForeColor = oThemeEngine.ColorHighlight
+        lblLastAction.ForeColor = oThemeEngine.ColorHighlight
+
+        'Output Log
+        txtLog.BackColor = oThemeEngine.ColorBaseSecondary
+        txtLog.ForeColor = oThemeEngine.ColorHighlight
+#End Region
     End Sub
 
     'Functions that control the scanning for games
