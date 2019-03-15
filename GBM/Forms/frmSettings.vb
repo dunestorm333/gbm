@@ -451,8 +451,4 @@ Public Class frmSettings
     Private Sub lstSettings_SelectedValueChanged(sender As Object, e As EventArgs) Handles lstSettings.SelectedValueChanged
         ChangePanel()
     End Sub
-
-    Private Sub cboThemeSelection_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboThemeSelection.SelectedValueChanged
-        'Todo
-    End Sub
 End Class

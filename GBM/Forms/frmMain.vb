@@ -60,6 +60,7 @@ Public Class frmMain
     Public WithEvents oRestore As New mgrRestore
     Public hshScanList As Hashtable
     Public oSettings As New mgrSettings
+    Public oThemeEngine As New mgrThemeEngine
 
     Delegate Sub UpdateNotifierCallBack(ByVal iCount As Integer)
     Delegate Sub UpdateLogCallBack(ByVal sLogUpdate As String, ByVal bTrayUpdate As Boolean, ByVal objIcon As System.Windows.Forms.ToolTipIcon, ByVal bTimeStamp As Boolean)
@@ -968,6 +969,7 @@ Public Class frmMain
             mgrPath.RemoteDatabaseLocation = oSettings.BackupFolder
             SetupSyncWatcher()
             LoadGameSettings()
+            SetAppTheme()
         End If
         ResumeScan()
     End Sub
@@ -1566,21 +1568,22 @@ Public Class frmMain
         ResetGameInfo()
 
         'Initialise theme engine
-        InitThemeEngine()
+        SetAppTheme()
     End Sub
 
-    Private Sub InitThemeEngine()
-        Dim oThemeEngine As New mgrThemeEngine
-        oThemeEngine.SetTheme(mgrThemeEngine.eBaseTheme.Dark) 'Will ultimately be changable via UI
+    Private Sub SetAppTheme()
+        oThemeEngine.SetTheme(oSettings.ThemeSelection)
 
         'Base Theme
         BackColor = oThemeEngine.ColorBase
+
         'Menu/Status Bars
         gMonMainMenu.BackColor = oThemeEngine.ColorBase
         gMonMainMenu.ForeColor = oThemeEngine.ColorHighlightSecondary
         gMonStatusStrip.BackColor = oThemeEngine.ColorBase
         gMonStripTxtStatus.ForeColor = oThemeEngine.ColorHighlight
         gMonStripStatusButton.ForeColor = oThemeEngine.ColorHighlight
+
         'Text Labels
         lblGameTitle.ForeColor = oThemeEngine.ColorHighlight
         lblStatus1.ForeColor = oThemeEngine.ColorHighlight
@@ -1589,6 +1592,7 @@ Public Class frmMain
         lblTimeSpent.ForeColor = oThemeEngine.ColorHighlight
         lblLastActionTitle.ForeColor = oThemeEngine.ColorHighlight
         lblLastAction.ForeColor = oThemeEngine.ColorHighlight
+
         'Output Log
         txtLog.BackColor = oThemeEngine.ColorBaseSecondary
         txtLog.ForeColor = oThemeEngine.ColorHighlight
