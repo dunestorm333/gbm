@@ -99,6 +99,7 @@ Public Class frmSettings
         oSettings.SuppressBackup = chkSuppressBackup.Checked
         oSettings.SuppressBackupThreshold = nudSuppressBackupThreshold.Value
         oSettings.CompressionLevel = cboCompression.SelectedValue
+        oSettings.ThemeSelection = cboThemeSelection.SelectedValue
 
         If oSettings.Custom7zArguments <> txt7zArguments.Text.Trim And txt7zArguments.Text.Trim <> String.Empty Then
             mgrCommon.ShowMessage(frmSettings_WarningArguments, MsgBoxStyle.Exclamation)
@@ -234,6 +235,8 @@ Public Class frmSettings
         txt7zArguments.Text = oSettings.Custom7zArguments
         txt7zLocation.Text = oSettings.Custom7zLocation
         eCurrentSyncFields = oSettings.SyncFields
+        cboThemeSelection.SelectedIndex = oSettings.ThemeSelection
+        chkAutoHideLog.Checked = oSettings.AutoHideLog
 
         'Retrieve 7z Info
         GetUtilityInfo(oSettings.Custom7zLocation)
@@ -243,6 +246,7 @@ Public Class frmSettings
     Private Sub LoadCombos()
         Dim oComboItems As New List(Of KeyValuePair(Of Integer, String))
         Dim oSettingsItems As New List(Of KeyValuePair(Of Integer, String))
+        Dim oThemeItems As New List(Of KeyValuePair(Of Integer, String))
 
         'cboCompression
         cboCompression.ValueMember = "Key"
@@ -256,6 +260,15 @@ Public Class frmSettings
         oComboItems.Add(New KeyValuePair(Of Integer, String)(9, frmSettings_cboCompression_Ultra))
 
         cboCompression.DataSource = oComboItems
+
+        'cboThemes
+        cboThemeSelection.ValueMember = "Key"
+        cboThemeSelection.DisplayMember = "Value"
+
+        oThemeItems.Add(New KeyValuePair(Of Integer, String)(0, frmSettings_cboThemeSelection_Light))
+        oThemeItems.Add(New KeyValuePair(Of Integer, String)(1, frmSettings_cboThemeSelection_Dark))
+
+        cboThemeSelection.DataSource = oThemeItems
 
         'lstSettings
         lstSettings.ValueMember = "Key"
@@ -436,5 +449,9 @@ Public Class frmSettings
 
     Private Sub lstSettings_SelectedValueChanged(sender As Object, e As EventArgs) Handles lstSettings.SelectedValueChanged
         ChangePanel()
+    End Sub
+
+    Private Sub cboThemeSelection_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboThemeSelection.SelectedValueChanged
+        'Todo
     End Sub
 End Class

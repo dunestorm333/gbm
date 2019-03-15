@@ -27,6 +27,8 @@ Public Class mgrSettings
     Private bDisableSyncMessages As Boolean = True
     Private bShowResolvedPaths As Boolean = True
     Private bDisableDiskSpaceCheck As Boolean = False
+    Private eThemeSelection As mgrThemeEngine.eBaseTheme = mgrThemeEngine.eBaseTheme.Light
+    Private bAutoHideLog As Boolean = False
 
     <Flags()> Public Enum eSuppressMessages
         None = 0
@@ -318,6 +320,24 @@ Public Class mgrSettings
         End Set
     End Property
 
+    Property ThemeSelection As mgrThemeEngine.eBaseTheme
+        Get
+            Return eThemeSelection
+        End Get
+        Set(value As mgrThemeEngine.eBaseTheme)
+            eThemeSelection = value
+        End Set
+    End Property
+
+    Property AutoHideLog As Boolean
+        Get
+            Return bAutoHideLog
+        End Get
+        Set(value As Boolean)
+            bAutoHideLog = value
+        End Set
+    End Property
+
     Sub New()
         'The GameIDsync message should be suppressed on all new databases
         SuppressMessages = SetMessageField(SuppressMessages, eSuppressMessages.GameIDSync)
@@ -332,7 +352,7 @@ Public Class mgrSettings
         sSQL &= "@CreateSubFolder, @ShowOverwriteWarning, @RestoreOnLaunch, @BackupFolder, @StartWithWindows, "
         sSQL &= "@TimeTracking, @SuppressBackup, @SuppressBackupThreshold, @CompressionLevel, @Custom7zArguments, @Custom7zLocation, "
         sSQL &= "@SyncFields, @AutoSaveLog, @AutoRestore, @AutoMark, @SessionTracking, @SuppressMessages, @BackupOnLaunch, @UseGameID, "
-        sSQL &= "@DisableSyncMessages, @ShowResolvedPaths, @DisableDiskSpaceCheck)"
+        sSQL &= "@DisableSyncMessages, @ShowResolvedPaths, @DisableDiskSpaceCheck, @ThemeSelection, @AutoHideLog)"
 
         hshParams.Add("MonitorOnStartup", MonitorOnStartup)
         hshParams.Add("StartToTray", StartToTray)
@@ -360,7 +380,8 @@ Public Class mgrSettings
         hshParams.Add("DisableSyncMessages", DisableSyncMessages)
         hshParams.Add("ShowResolvedPaths", ShowResolvedPaths)
         hshParams.Add("DisableDiskSpaceCheck", DisableDiskSpaceCheck)
-
+        hshParams.Add("ThemeSelection", ThemeSelection)
+        hshParams.Add("AutoHideLog", AutoHideLog)
         oDatabase.RunParamQuery(sSQL, hshParams)
     End Sub
 
@@ -401,6 +422,8 @@ Public Class mgrSettings
             DisableSyncMessages = CBool(dr("DisableSyncMessages"))
             ShowResolvedPaths = CBool(dr("ShowResolvedPaths"))
             DisableDiskSpaceCheck = CBool(dr("DisableDiskSpaceCheck"))
+            ThemeSelection = CInt(dr("ThemeSelection"))
+            AutoHideLog = CBool(dr("AutoHideLog"))
         Next
 
         oDatabase.Disconnect()

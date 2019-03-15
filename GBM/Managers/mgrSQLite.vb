@@ -77,6 +77,7 @@ Public Class mgrSQLite
                    "Custom7zLocation TEXT, SyncFields INTEGER NOT NULL, AutoSaveLog BOOLEAN NOT NULL, AutoRestore BOOLEAN NOT NULL, AutoMark BOOLEAN NOT NULL, SessionTracking BOOLEAN NOT NULL, " &
                    "SuppressMessages INTEGER NOT NULL, BackupOnLaunch BOOLEAN NOT NULL, UseGameID BOOLEAN NOT NULL, DisableSyncMessages BOOLEAN NOT NULL, ShowResolvedPaths BOOLEAN NOT NULL, " &
                    "DisableDiskSpaceCheck BOOLEAN NOT NULL);"
+                   "DisableDiskSpaceCheck BOOLEAN NOT NULL, ThemeSelection INTEGER NOT NULL, AutoHideLog BOOLEAN NOT NULL);"
             'Add Tables (SavedPath)
             sSql &= "CREATE TABLE savedpath (PathName TEXT NOT NULL PRIMARY KEY, Path TEXT NOT NULL);"
 
@@ -931,6 +932,8 @@ Public Class mgrSQLite
                 'Add new field(s)
                 sSQL = "ALTER TABLE monitorlist ADD COLUMN OS INTEGER NOT NULL DEFAULT " & mgrCommon.GetCurrentOS & ";"
                 sSQL &= "ALTER TABLE settings ADD COLUMN DisableDiskSpaceCheck BOOLEAN NOT NULL DEFAULT 0;"
+                sSQL &= "ALTER TABLE settings ADD COLUMN ThemeSelection INTEGER NOT NULL DEFAULT 0;"
+                sSQL &= "ALTER TABLE settings ADD COLUMN AutoHideLog BOOLEAN NOT NULL DEFAULT 0;"
 
                 'Add Tables (Wine Data)
                 sSQL &= "CREATE TABLE winedata (MonitorID TEXT NOT NULL PRIMARY KEY, Prefix TEXT NOT NULL, SavePath TEXT NOT NULL, BinaryPath TEXT NOT NULL);"

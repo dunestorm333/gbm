@@ -12,8 +12,8 @@ Public Class mgrThemeEngine
     ''' Supported themes.
     ''' </summary>
     Public Enum eBaseTheme
-        Dark
-        Light
+        Light = 0
+        Dark = 1
     End Enum
 
     ''' <summary>

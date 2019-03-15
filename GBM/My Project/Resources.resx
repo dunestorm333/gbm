@@ -2401,4 +2401,10 @@
   <data name="frmSettings_lstSettings_Interface" xml:space="preserve">
     <value>Interface</value>
   </data>
+  <data name="frmSettings_cboThemeSelection_Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="frmSettings_cboThemeSelection_Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
 </root>

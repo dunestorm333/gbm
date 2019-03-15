@@ -77,9 +77,9 @@ Partial Class frmSettings
         Me.chkMonitorOnStartup = New System.Windows.Forms.CheckBox()
         Me.pnlInterface = New System.Windows.Forms.Panel()
         Me.grpInterfaceOptions = New System.Windows.Forms.GroupBox()
+        Me.chkAutoHideLog = New System.Windows.Forms.CheckBox()
+        Me.cboThemeSelection = New System.Windows.Forms.ComboBox()
         Me.lblThemeSelection = New System.Windows.Forms.Label()
-        Me.cmbThemeSelection = New System.Windows.Forms.ComboBox()
-        Me.chkAutoHideOutput = New System.Windows.Forms.CheckBox()
         Me.grpFolderOptions.SuspendLayout()
         Me.grp7zGeneral.SuspendLayout()
         Me.pnlBackup.SuspendLayout()
@@ -639,8 +639,8 @@ Partial Class frmSettings
         '
         'grpInterfaceOptions
         '
-        Me.grpInterfaceOptions.Controls.Add(Me.chkAutoHideOutput)
-        Me.grpInterfaceOptions.Controls.Add(Me.cmbThemeSelection)
+        Me.grpInterfaceOptions.Controls.Add(Me.chkAutoHideLog)
+        Me.grpInterfaceOptions.Controls.Add(Me.cboThemeSelection)
         Me.grpInterfaceOptions.Controls.Add(Me.lblThemeSelection)
         Me.grpInterfaceOptions.Location = New System.Drawing.Point(6, 12)
         Me.grpInterfaceOptions.Name = "grpInterfaceOptions"
@@ -648,6 +648,25 @@ Partial Class frmSettings
         Me.grpInterfaceOptions.TabIndex = 1
         Me.grpInterfaceOptions.TabStop = False
         Me.grpInterfaceOptions.Text = "Interface Options"
+        '
+        'chkAutoHideLog
+        '
+        Me.chkAutoHideLog.AutoSize = True
+        Me.chkAutoHideLog.Location = New System.Drawing.Point(12, 56)
+        Me.chkAutoHideLog.Name = "chkAutoHideLog"
+        Me.chkAutoHideLog.Size = New System.Drawing.Size(167, 17)
+        Me.chkAutoHideLog.TabIndex = 3
+        Me.chkAutoHideLog.Text = "Automatically hide backup log"
+        Me.chkAutoHideLog.UseVisualStyleBackColor = True
+        '
+        'cboThemeSelection
+        '
+        Me.cboThemeSelection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboThemeSelection.FormattingEnabled = True
+        Me.cboThemeSelection.Location = New System.Drawing.Point(100, 23)
+        Me.cboThemeSelection.Name = "cboThemeSelection"
+        Me.cboThemeSelection.Size = New System.Drawing.Size(121, 21)
+        Me.cboThemeSelection.TabIndex = 1
         '
         'lblThemeSelection
         '
@@ -657,25 +676,6 @@ Partial Class frmSettings
         Me.lblThemeSelection.Size = New System.Drawing.Size(90, 13)
         Me.lblThemeSelection.TabIndex = 0
         Me.lblThemeSelection.Text = "Theme Selection:"
-        '
-        'cmbThemeSelection
-        '
-        Me.cmbThemeSelection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbThemeSelection.FormattingEnabled = True
-        Me.cmbThemeSelection.Location = New System.Drawing.Point(100, 23)
-        Me.cmbThemeSelection.Name = "cmbThemeSelection"
-        Me.cmbThemeSelection.Size = New System.Drawing.Size(121, 21)
-        Me.cmbThemeSelection.TabIndex = 1
-        '
-        'chkAutoHideOutput
-        '
-        Me.chkAutoHideOutput.AutoSize = True
-        Me.chkAutoHideOutput.Location = New System.Drawing.Point(12, 56)
-        Me.chkAutoHideOutput.Name = "chkAutoHideOutput"
-        Me.chkAutoHideOutput.Size = New System.Drawing.Size(183, 17)
-        Me.chkAutoHideOutput.TabIndex = 3
-        Me.chkAutoHideOutput.Text = "Automatically hide output window"
-        Me.chkAutoHideOutput.UseVisualStyleBackColor = True
         '
         'frmSettings
         '
@@ -785,7 +785,7 @@ Partial Class frmSettings
     Friend WithEvents chkDisableDiskSpaceCheck As CheckBox
     Friend WithEvents pnlInterface As Panel
     Friend WithEvents grpInterfaceOptions As GroupBox
-    Friend WithEvents chkAutoHideOutput As CheckBox
-    Friend WithEvents cmbThemeSelection As ComboBox
+    Friend WithEvents chkAutoHideLog As CheckBox
+    Friend WithEvents cboThemeSelection As ComboBox
     Friend WithEvents lblThemeSelection As Label
 End Class
