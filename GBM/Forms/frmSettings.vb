@@ -100,6 +100,7 @@ Public Class frmSettings
         oSettings.SuppressBackupThreshold = nudSuppressBackupThreshold.Value
         oSettings.CompressionLevel = cboCompression.SelectedValue
         oSettings.ThemeSelection = cboThemeSelection.SelectedValue
+        oSettings.AutoHideLog = chkAutoHideLog.Checked
 
         If oSettings.Custom7zArguments <> txt7zArguments.Text.Trim And txt7zArguments.Text.Trim <> String.Empty Then
             mgrCommon.ShowMessage(frmSettings_WarningArguments, MsgBoxStyle.Exclamation)
