@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmSettings
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmSettings
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.chkAutoSaveLog = New System.Windows.Forms.CheckBox()
         Me.btnOptionalFields = New System.Windows.Forms.Button()
@@ -47,6 +47,7 @@ Partial Class frmSettings
         Me.btnDefaults = New System.Windows.Forms.Button()
         Me.pnlBackup = New System.Windows.Forms.Panel()
         Me.grpBackupConfirmations = New System.Windows.Forms.GroupBox()
+        Me.chkDisableDiskSpaceCheck = New System.Windows.Forms.CheckBox()
         Me.chkBackupConfirm = New System.Windows.Forms.CheckBox()
         Me.chkOverwriteWarning = New System.Windows.Forms.CheckBox()
         Me.grpBackupHandling = New System.Windows.Forms.GroupBox()
@@ -74,7 +75,11 @@ Partial Class frmSettings
         Me.chkAutoStart = New System.Windows.Forms.CheckBox()
         Me.chkStartMinimized = New System.Windows.Forms.CheckBox()
         Me.chkMonitorOnStartup = New System.Windows.Forms.CheckBox()
-        Me.chkDisableDiskSpaceCheck = New System.Windows.Forms.CheckBox()
+        Me.pnlInterface = New System.Windows.Forms.Panel()
+        Me.grpInterfaceOptions = New System.Windows.Forms.GroupBox()
+        Me.lblThemeSelection = New System.Windows.Forms.Label()
+        Me.cmbThemeSelection = New System.Windows.Forms.ComboBox()
+        Me.chkAutoHideOutput = New System.Windows.Forms.CheckBox()
         Me.grpFolderOptions.SuspendLayout()
         Me.grp7zGeneral.SuspendLayout()
         Me.pnlBackup.SuspendLayout()
@@ -90,6 +95,8 @@ Partial Class frmSettings
         Me.grpGameData.SuspendLayout()
         Me.pnlStartup.SuspendLayout()
         Me.grpStartup.SuspendLayout()
+        Me.pnlInterface.SuspendLayout()
+        Me.grpInterfaceOptions.SuspendLayout()
         Me.SuspendLayout()
         '
         'chkAutoSaveLog
@@ -328,6 +335,16 @@ Partial Class frmSettings
         Me.grpBackupConfirmations.TabIndex = 2
         Me.grpBackupConfirmations.TabStop = False
         Me.grpBackupConfirmations.Text = "Backup Confirmations"
+        '
+        'chkDisableDiskSpaceCheck
+        '
+        Me.chkDisableDiskSpaceCheck.AutoSize = True
+        Me.chkDisableDiskSpaceCheck.Location = New System.Drawing.Point(9, 41)
+        Me.chkDisableDiskSpaceCheck.Name = "chkDisableDiskSpaceCheck"
+        Me.chkDisableDiskSpaceCheck.Size = New System.Drawing.Size(222, 17)
+        Me.chkDisableDiskSpaceCheck.TabIndex = 1
+        Me.chkDisableDiskSpaceCheck.Text = "Disable disk space check prior to backup"
+        Me.chkDisableDiskSpaceCheck.UseVisualStyleBackColor = True
         '
         'chkBackupConfirm
         '
@@ -612,21 +629,60 @@ Partial Class frmSettings
         Me.chkMonitorOnStartup.Text = "Start monitoring on launch"
         Me.chkMonitorOnStartup.UseVisualStyleBackColor = True
         '
-        'chkDisableDiskSpaceCheck
+        'pnlInterface
         '
-        Me.chkDisableDiskSpaceCheck.AutoSize = True
-        Me.chkDisableDiskSpaceCheck.Location = New System.Drawing.Point(9, 41)
-        Me.chkDisableDiskSpaceCheck.Name = "chkDisableDiskSpaceCheck"
-        Me.chkDisableDiskSpaceCheck.Size = New System.Drawing.Size(222, 17)
-        Me.chkDisableDiskSpaceCheck.TabIndex = 1
-        Me.chkDisableDiskSpaceCheck.Text = "Disable disk space check prior to backup"
-        Me.chkDisableDiskSpaceCheck.UseVisualStyleBackColor = True
+        Me.pnlInterface.Controls.Add(Me.grpInterfaceOptions)
+        Me.pnlInterface.Location = New System.Drawing.Point(180, 0)
+        Me.pnlInterface.Name = "pnlInterface"
+        Me.pnlInterface.Size = New System.Drawing.Size(367, 314)
+        Me.pnlInterface.TabIndex = 9
+        '
+        'grpInterfaceOptions
+        '
+        Me.grpInterfaceOptions.Controls.Add(Me.chkAutoHideOutput)
+        Me.grpInterfaceOptions.Controls.Add(Me.cmbThemeSelection)
+        Me.grpInterfaceOptions.Controls.Add(Me.lblThemeSelection)
+        Me.grpInterfaceOptions.Location = New System.Drawing.Point(6, 12)
+        Me.grpInterfaceOptions.Name = "grpInterfaceOptions"
+        Me.grpInterfaceOptions.Size = New System.Drawing.Size(354, 97)
+        Me.grpInterfaceOptions.TabIndex = 1
+        Me.grpInterfaceOptions.TabStop = False
+        Me.grpInterfaceOptions.Text = "Interface Options"
+        '
+        'lblThemeSelection
+        '
+        Me.lblThemeSelection.AutoSize = True
+        Me.lblThemeSelection.Location = New System.Drawing.Point(9, 27)
+        Me.lblThemeSelection.Name = "lblThemeSelection"
+        Me.lblThemeSelection.Size = New System.Drawing.Size(90, 13)
+        Me.lblThemeSelection.TabIndex = 0
+        Me.lblThemeSelection.Text = "Theme Selection:"
+        '
+        'cmbThemeSelection
+        '
+        Me.cmbThemeSelection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbThemeSelection.FormattingEnabled = True
+        Me.cmbThemeSelection.Location = New System.Drawing.Point(100, 23)
+        Me.cmbThemeSelection.Name = "cmbThemeSelection"
+        Me.cmbThemeSelection.Size = New System.Drawing.Size(121, 21)
+        Me.cmbThemeSelection.TabIndex = 1
+        '
+        'chkAutoHideOutput
+        '
+        Me.chkAutoHideOutput.AutoSize = True
+        Me.chkAutoHideOutput.Location = New System.Drawing.Point(12, 56)
+        Me.chkAutoHideOutput.Name = "chkAutoHideOutput"
+        Me.chkAutoHideOutput.Size = New System.Drawing.Size(183, 17)
+        Me.chkAutoHideOutput.TabIndex = 3
+        Me.chkAutoHideOutput.Text = "Automatically hide output window"
+        Me.chkAutoHideOutput.UseVisualStyleBackColor = True
         '
         'frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(554, 361)
+        Me.Controls.Add(Me.pnlInterface)
         Me.Controls.Add(Me.pnlStartup)
         Me.Controls.Add(Me.pnlBackup)
         Me.Controls.Add(Me.pnlGeneral)
@@ -668,6 +724,9 @@ Partial Class frmSettings
         Me.pnlStartup.ResumeLayout(False)
         Me.grpStartup.ResumeLayout(False)
         Me.grpStartup.PerformLayout()
+        Me.pnlInterface.ResumeLayout(False)
+        Me.grpInterfaceOptions.ResumeLayout(False)
+        Me.grpInterfaceOptions.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -724,4 +783,9 @@ Partial Class frmSettings
     Friend WithEvents grpGameMonitoringOptions As GroupBox
     Friend WithEvents chkShowResolvedPaths As CheckBox
     Friend WithEvents chkDisableDiskSpaceCheck As CheckBox
+    Friend WithEvents pnlInterface As Panel
+    Friend WithEvents grpInterfaceOptions As GroupBox
+    Friend WithEvents chkAutoHideOutput As CheckBox
+    Friend WithEvents cmbThemeSelection As ComboBox
+    Friend WithEvents lblThemeSelection As Label
 End Class

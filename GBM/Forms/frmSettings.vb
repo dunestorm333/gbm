@@ -265,6 +265,7 @@ Public Class frmSettings
         oSettingsItems.Add(New KeyValuePair(Of Integer, String)(1, frmSettings_lstSettings_BackupRestore))
         oSettingsItems.Add(New KeyValuePair(Of Integer, String)(2, frmSettings_lstSettings_Startup))
         oSettingsItems.Add(New KeyValuePair(Of Integer, String)(3, frmSettings_lstSettings_7z))
+        oSettingsItems.Add(New KeyValuePair(Of Integer, String)(4, frmSettings_lstSettings_Interface))
 
         lstSettings.DataSource = oSettingsItems
 
@@ -291,22 +292,32 @@ Public Class frmSettings
                     pnlStartup.Visible = False
                     pnlBackup.Visible = False
                     pnl7z.Visible = False
+                    pnlInterface.Visible = False
                 Case 1
                     pnlGeneral.Visible = False
                     pnlBackup.Visible = True
                     pnlStartup.Visible = False
                     pnl7z.Visible = False
+                    pnlInterface.Visible = False
                 Case 2
                     pnlGeneral.Visible = False
                     pnlBackup.Visible = False
                     pnlStartup.Visible = True
                     pnl7z.Visible = False
+                    pnlInterface.Visible = False
 
                 Case 3
                     pnlGeneral.Visible = False
                     pnlBackup.Visible = False
                     pnlStartup.Visible = False
                     pnl7z.Visible = True
+                    pnlInterface.Visible = False
+                Case 4
+                    pnlGeneral.Visible = False
+                    pnlBackup.Visible = False
+                    pnlStartup.Visible = False
+                    pnl7z.Visible = False
+                    pnlInterface.Visible = True
             End Select
         End If
     End Sub

@@ -5065,6 +5065,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Interface.
+        '''</summary>
+        Friend ReadOnly Property frmSettings_lstSettings_Interface() As String
+            Get
+                Return ResourceManager.GetString("frmSettings_lstSettings_Interface", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Startup.
         '''</summary>
         Friend ReadOnly Property frmSettings_lstSettings_Startup() As String

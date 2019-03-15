@@ -2398,4 +2398,7 @@
   <data name="mgrThemeEngine_RGB_Light_HighlightSecondary" xml:space="preserve">
     <value>0,0,0</value>
   </data>
+  <data name="frmSettings_lstSettings_Interface" xml:space="preserve">
+    <value>Interface</value>
+  </data>
 </root>
