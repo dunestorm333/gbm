@@ -2,10 +2,10 @@
 
 Public Class mgrThemeEngine
 
-    Public ReadOnly Property colBase As Color
-    Public ReadOnly Property colBaseAlt As Color
-    Public ReadOnly Property colHightlight As Color
-    Public ReadOnly Property colHighlightAlt As Color
+    Public ReadOnly Property ColorBase As Color
+    Public ReadOnly Property ColorBaseSecondary As Color
+    Public ReadOnly Property ColorHighlight As Color
+    Public ReadOnly Property ColorHighlightSecondary As Color
 
 
     ''' <summary>
@@ -25,30 +25,30 @@ Public Class mgrThemeEngine
         Dim selectedColor As Color
         Select Case _eBaseTheme
             Case eBaseTheme.Dark
-                _colBase = New ColorConverter().ConvertFromString(
-                    mgrThemeEngine_Theme_Dark_Base)
+                _ColorBase = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Dark_Base)
 
-                _colBaseAlt = New ColorConverter().ConvertFromString(
-                    mgrThemeEngine_Theme_Dark_BaseAlt)
+                _ColorBaseSecondary = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Dark_BaseSecondary)
 
-                _colHightlight = New ColorConverter().ConvertFromString(
-                    mgrThemeEngine_Theme_Dark_Highlight)
+                _ColorHighlight = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Dark_Highlight)
 
-                _colHighlightAlt = New ColorConverter().ConvertFromString(
-                    mgrThemeEngine_Theme_Dark_HighlightAlt)
+                _ColorHighlightSecondary = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Dark_HighlightSecondary)
 
             Case eBaseTheme.Light
-                _colBase = New ColorConverter().ConvertFromString(
-                    mgrThemeEngine_Theme_Light_Base)
+                _ColorBase = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Light_Base)
 
-                _colBaseAlt = New ColorConverter().ConvertFromString(
-                    mgrThemeEngine_Theme_Light_BaseAlt)
+                _ColorBaseSecondary = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Light_BaseSecondary)
 
-                _colHightlight = New ColorConverter().ConvertFromString(
-                    mgrThemeEngine_Theme_Light_Highlight)
+                _ColorHighlight = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Light_Highlight)
 
-                _colHighlightAlt = New ColorConverter().ConvertFromString(
-                    mgrThemeEngine_Theme_Light_HighlightAlt)
+                _ColorHighlightSecondary = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Light_HighlightSecondary)
 
         End Select
         Return selectedColor

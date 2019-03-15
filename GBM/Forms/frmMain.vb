@@ -1571,23 +1571,27 @@ Public Class frmMain
 
     Private Sub InitThemeEngine()
         Dim oThemeEngine As New mgrThemeEngine
-        oThemeEngine.SetTheme(mgrThemeEngine.eBaseTheme.Light) 'Will ultimately be changable via UI
+        oThemeEngine.SetTheme(mgrThemeEngine.eBaseTheme.Dark) 'Will ultimately be changable via UI
 
-        BackColor = oThemeEngine.colBase
-        gMonMainMenu.BackColor = oThemeEngine.colBase
-        gMonMainMenu.ForeColor = oThemeEngine.colHighlightAlt
-        gMonStatusStrip.BackColor = oThemeEngine.colBase
-        gMonStripTxtStatus.ForeColor = oThemeEngine.colHightlight
-        gMonStripStatusButton.ForeColor = oThemeEngine.colHightlight
-        lblGameTitle.ForeColor = oThemeEngine.colHightlight
-        lblStatus1.ForeColor = oThemeEngine.colHightlight
-        lblStatus2.ForeColor = oThemeEngine.colHightlight
-        lblStatus3.ForeColor = oThemeEngine.colHightlight
-        lblTimeSpent.ForeColor = oThemeEngine.colHightlight
-        lblLastActionTitle.ForeColor = oThemeEngine.colHightlight
-        lblLastAction.ForeColor = oThemeEngine.colHightlight
-        txtLog.BackColor = oThemeEngine.colBaseAlt
-        txtLog.ForeColor = oThemeEngine.colHightlight
+        'Base Theme
+        BackColor = oThemeEngine.ColorBase
+        'Menu/Status Bars
+        gMonMainMenu.BackColor = oThemeEngine.ColorBase
+        gMonMainMenu.ForeColor = oThemeEngine.ColorHighlightSecondary
+        gMonStatusStrip.BackColor = oThemeEngine.ColorBase
+        gMonStripTxtStatus.ForeColor = oThemeEngine.ColorHighlight
+        gMonStripStatusButton.ForeColor = oThemeEngine.ColorHighlight
+        'Text Labels
+        lblGameTitle.ForeColor = oThemeEngine.ColorHighlight
+        lblStatus1.ForeColor = oThemeEngine.ColorHighlight
+        lblStatus2.ForeColor = oThemeEngine.ColorHighlight
+        lblStatus3.ForeColor = oThemeEngine.ColorHighlight
+        lblTimeSpent.ForeColor = oThemeEngine.ColorHighlight
+        lblLastActionTitle.ForeColor = oThemeEngine.ColorHighlight
+        lblLastAction.ForeColor = oThemeEngine.ColorHighlight
+        'Output Log
+        txtLog.BackColor = oThemeEngine.ColorBaseSecondary
+        txtLog.ForeColor = oThemeEngine.ColorHighlight
     End Sub
 
     Private Function BuildChildProcesses() As Integer

@@ -257,14 +257,15 @@ Partial Class frmMain
         Me.txtLog.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtLog.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLog.Location = New System.Drawing.Point(12, 184)
+        Me.txtLog.Location = New System.Drawing.Point(0, 184)
         Me.txtLog.MaxLength = 524288
         Me.txtLog.Multiline = True
         Me.txtLog.Name = "txtLog"
         Me.txtLog.ReadOnly = True
         Me.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtLog.Size = New System.Drawing.Size(500, 186)
+        Me.txtLog.Size = New System.Drawing.Size(524, 192)
         Me.txtLog.TabIndex = 10
         Me.txtLog.TabStop = False
         '
@@ -292,7 +293,7 @@ Partial Class frmMain
         '
         Me.gMonStripTxtStatus.Margin = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.gMonStripTxtStatus.Name = "gMonStripTxtStatus"
-        Me.gMonStripTxtStatus.Size = New System.Drawing.Size(369, 22)
+        Me.gMonStripTxtStatus.Size = New System.Drawing.Size(400, 22)
         Me.gMonStripTxtStatus.Spring = True
         Me.gMonStripTxtStatus.Text = "Monitor Status"
         Me.gMonStripTxtStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
