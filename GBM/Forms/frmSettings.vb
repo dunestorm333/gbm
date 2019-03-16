@@ -5,6 +5,7 @@ Public Class frmSettings
     Dim bShutdown As Boolean = False
     Dim bSyncSettingsChanged As Boolean = False
     Dim eCurrentSyncFields As clsGame.eOptionalSyncFields
+
     Private oSettings As mgrSettings
 
     Property Settings As mgrSettings
@@ -450,5 +451,24 @@ Public Class frmSettings
 
     Private Sub lstSettings_SelectedValueChanged(sender As Object, e As EventArgs) Handles lstSettings.SelectedValueChanged
         ChangePanel()
+    End Sub
+
+    Private Sub cboThemeSelection_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboThemeSelection.SelectedValueChanged
+        'Previews theme based on current combo-box selection.
+        Dim oThemeEngine As New mgrThemeEngine()
+
+        If cboThemeSelection.SelectedIndex = 0 Then
+            oThemeEngine.SetTheme(cboThemeSelection.SelectedIndex)
+        ElseIf cboThemeSelection.SelectedIndex = 1 Then
+            oThemeEngine.SetTheme(cboThemeSelection.SelectedIndex)
+        End If
+
+        'Only set the theme once it has been defined.
+        If oThemeEngine.bThemeHasBeenDefined Then
+            btnPrevBase.BackColor = oThemeEngine.ColorBase
+            btnPrevBaseSec.BackColor = oThemeEngine.ColorBaseSecondary
+            btnPrevHighlight.BackColor = oThemeEngine.ColorHighlight
+            btnPrevHighlightSec.BackColor = oThemeEngine.ColorHighlightSecondary
+        End If
     End Sub
 End Class

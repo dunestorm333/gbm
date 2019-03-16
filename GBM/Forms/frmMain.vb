@@ -60,7 +60,6 @@ Public Class frmMain
     Public WithEvents oRestore As New mgrRestore
     Public hshScanList As Hashtable
     Public oSettings As New mgrSettings
-    Public oThemeEngine As New mgrThemeEngine
 
     Delegate Sub UpdateNotifierCallBack(ByVal iCount As Integer)
     Delegate Sub UpdateLogCallBack(ByVal sLogUpdate As String, ByVal bTrayUpdate As Boolean, ByVal objIcon As System.Windows.Forms.ToolTipIcon, ByVal bTimeStamp As Boolean)
@@ -1642,6 +1641,7 @@ Public Class frmMain
 #End Region
 
 #Region "Set application theme"
+        Dim oThemeEngine As New mgrThemeEngine()
         oThemeEngine.SetTheme(oSettings.ThemeSelection)
 
         'Base Theme
