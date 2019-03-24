@@ -794,19 +794,13 @@ Public Class mgrMonitorList
         Return oList
     End Function
 
-    Public Shared Function SyncGameIDs(ByVal sPath As String, ByRef oSettings As mgrSettings, ByVal bOfficial As Boolean) As Boolean
+    Public Shared Function SyncGameIDs(ByVal sPath As String, ByVal bOfficial As Boolean) As Boolean
         Dim sWarning As String
 
         If bOfficial Then
-            If (oSettings.SuppressMessages And mgrSettings.eSuppressMessages.GameIDSync) = mgrSettings.eSuppressMessages.GameIDSync Then
-                sWarning = mgrMonitorList_ConfirmOfficialGameIDSync
-            Else
-                sWarning = mgrMonitorList_ConfirmInitialOfficialGameIDSync
-                oSettings.SuppressMessages = oSettings.SetMessageField(oSettings.SuppressMessages, mgrSettings.eSuppressMessages.GameIDSync)
-                oSettings.SaveSettings()
-            End If
+            sWarning = mgrMonitorList_ConfirmOfficialGameIDSync
         Else
-                sWarning = mgrMonitorList_ConfirmFileGameIDSync
+            sWarning = mgrMonitorList_ConfirmFileGameIDSync
         End If
 
         If mgrCommon.ShowMessage(sWarning, MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
@@ -830,13 +824,10 @@ Public Class mgrMonitorList
         Return True
     End Function
 
-    Public Shared Function DoImport(ByVal sPath As String, ByVal bOfficial As Boolean, ByRef oSettings As mgrSettings, Optional ByVal bStartUpWizard As Boolean = False, Optional ByVal bWinConfigsInLinux As Boolean = False) As Boolean
+    Public Shared Function DoImport(ByVal sPath As String, ByVal bOfficial As Boolean) As Boolean
         If mgrCommon.IsAddress(sPath) Then
             If mgrCommon.CheckAddress(sPath) Then
-                If bOfficial And Not bStartUpWizard And Not ((oSettings.SuppressMessages And mgrSettings.eSuppressMessages.GameIDSync) = mgrSettings.eSuppressMessages.GameIDSync) Then
-                    SyncGameIDs(sPath, oSettings, True)
-                End If
-                ImportMonitorList(sPath, True, bWinConfigsInLinux)
+                ImportMonitorList(sPath, True)
                 Return True
             Else
                 mgrCommon.ShowMessage(mgrMonitorList_WebNoReponse, sPath, MsgBoxStyle.Exclamation)
@@ -844,7 +835,7 @@ Public Class mgrMonitorList
             End If
         Else
             If File.Exists(sPath) Then
-                ImportMonitorList(sPath,, bWinConfigsInLinux)
+                ImportMonitorList(sPath)
                 Return True
             Else
                 mgrCommon.ShowMessage(mgrMonitorList_FileNotFound, sPath, MsgBoxStyle.Exclamation)
@@ -854,7 +845,7 @@ Public Class mgrMonitorList
         Return True
     End Function
 
-    Private Shared Sub ImportMonitorList(ByVal sLocation As String, Optional ByVal bWebRead As Boolean = False, Optional ByVal bWinConfigsInLinux As Boolean = False)
+    Private Shared Sub ImportMonitorList(ByVal sLocation As String, Optional ByVal bWebRead As Boolean = False)
         Dim hshCompareFrom As New Hashtable
         Dim hshCompareTo As Hashtable
         Dim hshSyncItems As Hashtable
@@ -864,7 +855,7 @@ Public Class mgrMonitorList
 
         Cursor.Current = Cursors.WaitCursor
 
-        If Not mgrXML.ReadMonitorList(sLocation, oExportInfo, hshCompareFrom, bWebRead, bWinConfigsInLinux) Then
+        If Not mgrXML.ReadMonitorList(sLocation, oExportInfo, hshCompareFrom, bWebRead) Then
             Exit Sub
         End If
 
@@ -901,7 +892,6 @@ Public Class mgrMonitorList
             Dim frm As New frmAdvancedImport
             frm.ImportInfo = oExportInfo
             frm.ImportData = hshSyncItems
-            frm.ModWinConfigsForLinux = bWinConfigsInLinux
             If frm.ShowDialog() = DialogResult.OK Then
                 Cursor.Current = Cursors.WaitCursor
 

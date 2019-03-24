@@ -3245,4 +3245,13 @@
         /AA=
 </value>
   </data>
+  <metadata name="bwMonitor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>256, 19</value>
+  </metadata>
+  <metadata name="gMonStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>368, 19</value>
+  </metadata>
+  <metadata name="gMonMainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>510, 19</value>
+  </metadata>
 </root>

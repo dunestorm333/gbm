@@ -467,7 +467,7 @@ Public Class frmMain
                     sExtractPath = oBackup.RelativeRestorePath
                 End If
 
-                If Not Directory.Exists(sExtractPath) Then
+                If Not Directory.Exists(sExtractPath) And Not mgrPath.IsSupportedRegistryPath(oBackup.RestorePath) Then
                     If oSettings.AutoMark Then
                         If mgrManifest.DoManifestCheck(de.Key, mgrSQLite.Database.Local) Then
                             mgrManifest.DoManifestUpdateByMonitorID(de.Value, mgrSQLite.Database.Local)
@@ -1105,12 +1105,12 @@ Public Class frmMain
         End If
 
         If bOfficial Then
-            mgrMonitorList.SyncGameIDs(sLocation, oSettings, True)
+            mgrMonitorList.SyncGameIDs(sLocation, True)
         Else
             sLocation = mgrCommon.OpenFileBrowser("XML_Import", frmGameManager_ChooseImportXML, "xml", frmGameManager_XML, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), False)
 
             If sLocation <> String.Empty Then
-                mgrMonitorList.SyncGameIDs(sLocation, oSettings, False)
+                mgrMonitorList.SyncGameIDs(sLocation, False)
             End If
         End If
 
@@ -1496,6 +1496,7 @@ Public Class frmMain
 
         'Set Form Name
         Me.Name = App_NameLong
+        Me.Icon = GBM_Icon
 
         'Set Menu Text
         gMonFile.Text = frmMain_gMonFile
@@ -2017,11 +2018,6 @@ Public Class frmMain
     End Sub
 
     Private Sub Main_FormClosing(sender As System.Object, e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
-        'Unix Handler
-        If mgrCommon.IsUnix And Not bShutdown Then
-            ShutdownApp()
-        End If
-
         Select Case e.CloseReason
             Case CloseReason.UserClosing
                 If bShutdown = False Then
@@ -2032,12 +2028,13 @@ Public Class frmMain
                         Me.WindowState = FormWindowState.Minimized
                         Me.ShowInTaskbar = False
                         Me.Visible = False
+                    Else
+                        ShutdownApp()
                     End If
                 End If
-            Case CloseReason.TaskManagerClosing, CloseReason.WindowsShutDown
-                'Do nothing and let the app close without warning
+            Case Else
+                ShutdownApp(False)
         End Select
-
     End Sub
 
     Private Sub AutoRestoreEventProcessor(myObject As Object, ByVal myEventArgs As EventArgs) Handles tmRestoreCheck.Elapsed
@@ -2226,12 +2223,12 @@ Public Class frmMain
 
                 'Windows and Linux require different settings for the system tray
                 If mgrCommon.IsUnix Then
+                    Me.gMonTray.Visible = False
                     Me.MinimizeBox = True
                     If oSettings.StartToTray Then
                         Me.WindowState = FormWindowState.Minimized
                     End If
                 Else
-                    Me.gMonTray.Visible = True
                     If oSettings.StartToTray Then
                         bShowToggle = False
                         Me.Visible = False

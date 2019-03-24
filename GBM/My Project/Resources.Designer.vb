@@ -889,6 +889,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Name.
+        '''</summary>
+        Friend ReadOnly Property frmChooseGame_ColumnName() As String
+            Get
+                Return ResourceManager.GetString("frmChooseGame_ColumnName", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Tags.
+        '''</summary>
+        Friend ReadOnly Property frmChooseGame_ColumnTags() As String
+            Get
+                Return ResourceManager.GetString("frmChooseGame_ColumnTags", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Choose Game.
         '''</summary>
         Friend ReadOnly Property frmChooseGame_FormName() As String
@@ -5805,6 +5823,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         '''</summary>
+        Friend ReadOnly Property GBM_Icon() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("GBM_Icon", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        '''</summary>
         Friend ReadOnly Property GBM_Tray_Detected() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("GBM_Tray_Detected", resourceCulture)
@@ -6367,7 +6395,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Do you want to sync your game identifiers with this export file?[BR][BR]You should only do this if you&apos;re managing your own game configurations.  If you use GBM on multiple PCs, please see &quot;Tools&quot; section of the online manual before using this feature..
+        '''  Looks up a localized string similar to Do you want to sync your game identifiers with this export file?[BR][BR]This tool is provided for very specific situations, please read the &quot;Tools&quot; section of the online manual before using this feature..
         '''</summary>
         Friend ReadOnly Property mgrMonitorList_ConfirmFileGameIDSync() As String
             Get
@@ -6376,16 +6404,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to GBM now uses a unique identifier for each game.  For the import feature to recognize game configurations from a prior version, they need to use the same identifiers.[BR][BR]Do you want to sync your game identifiers with the official list?[BR][BR]This feature is available anytime from the &quot;Tools&quot; menu.  If you use GBM on multiple PCs, please see &quot;Tools&quot; section of the online manual before using this feature..
-        '''</summary>
-        Friend ReadOnly Property mgrMonitorList_ConfirmInitialOfficialGameIDSync() As String
-            Get
-                Return ResourceManager.GetString("mgrMonitorList_ConfirmInitialOfficialGameIDSync", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to Do you want to sync your game identifiers with the official game list?[BR][BR]This allows the import feature to recognize game configurations from a prior version.  If you use GBM on multiple PCs, please see &quot;Tools&quot; section of the online manual before using this feature..
+        '''  Looks up a localized string similar to Do you want to sync your game identifiers with the official game list?[BR][BR]This tool is provided for very specific situations, please read the &quot;Tools&quot; section of the online manual before using this feature..
         '''</summary>
         Friend ReadOnly Property mgrMonitorList_ConfirmOfficialGameIDSync() As String
             Get

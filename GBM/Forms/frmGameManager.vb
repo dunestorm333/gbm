@@ -1763,7 +1763,7 @@ Public Class frmGameManager
         sLocation = mgrCommon.OpenFileBrowser("XML_Import", frmGameManager_ChooseImportXML, "xml", frmGameManager_XML, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), False)
 
         If sLocation <> String.Empty Then
-            If mgrMonitorList.DoImport(sLocation, False, Settings) Then
+            If mgrMonitorList.DoImport(sLocation, False) Then
                 mgrMonitorList.SyncMonitorLists(Settings)
                 LoadData()
                 LoadBackupData()
@@ -1783,9 +1783,9 @@ Public Class frmGameManager
 
     End Sub
 
-    Private Sub ImportOfficialGameList(ByVal sImportUrl As String, ByVal bWinConfigsInLinux As Boolean)
+    Private Sub ImportOfficialGameList(ByVal sImportUrl As String)
         If mgrCommon.ShowMessage(frmGameManager_ConfirmOfficialImport, MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-            If mgrMonitorList.DoImport(sImportUrl, True, Settings,, bWinConfigsInLinux) Then
+            If mgrMonitorList.DoImport(sImportUrl, True) Then
                 mgrMonitorList.SyncMonitorLists(Settings)
                 LoadData()
                 LoadBackupData()
@@ -1796,6 +1796,7 @@ Public Class frmGameManager
     Private Sub SetForm()
         'Set Form Name
         Me.Name = frmGameManager_FormName
+        Me.Icon = GBM_Icon
 
         'Set Form text
         grpFilter.Text = frmGameManager_grpFilter
@@ -2079,7 +2080,6 @@ Public Class frmGameManager
     End Sub
 
     Private Sub cmsOfficialWindows_Click(sender As Object, e As EventArgs) Handles cmsOfficialWindows.Click, cmsOfficial.Click
-        Dim bWinConfigsinLinux As Boolean = False
         'Show one time warning about Windows configs in Linux
         If mgrCommon.IsUnix Then
             If Not (oSettings.SuppressMessages And mgrSettings.eSuppressMessages.WinConfigsInLinux) = mgrSettings.eSuppressMessages.WinConfigsInLinux Then
@@ -2087,14 +2087,13 @@ Public Class frmGameManager
                 oSettings.SuppressMessages = oSettings.SetMessageField(oSettings.SuppressMessages, mgrSettings.eSuppressMessages.WinConfigsInLinux)
                 oSettings.SaveSettings()
             End If
-            bWinConfigsinLinux = True
         End If
 
-        ImportOfficialGameList(App_URLImport, bWinConfigsinLinux)
+        ImportOfficialGameList(App_URLImport)
     End Sub
 
     Private Sub cmsOfficialLinux_Click(sender As Object, e As EventArgs) Handles cmsOfficialLinux.Click
-        ImportOfficialGameList(App_URLImportLinux, False)
+        ImportOfficialGameList(App_URLImportLinux)
     End Sub
 
     Private Sub cmsFile_Click(sender As Object, e As EventArgs) Handles cmsFile.Click

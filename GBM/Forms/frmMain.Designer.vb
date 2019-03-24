@@ -106,6 +106,7 @@ Partial Class frmMain
         Me.gMonTray.ContextMenuStrip = Me.gMonTrayMenu
         Me.gMonTray.Icon = CType(resources.GetObject("gMonTray.Icon"), System.Drawing.Icon)
         Me.gMonTray.Text = "GBM"
+        Me.gMonTray.Visible = True
         '
         'gMonTrayMenu
         '
@@ -602,7 +603,6 @@ Partial Class frmMain
         Me.Controls.Add(Me.gMonStatusStrip)
         Me.Controls.Add(Me.gMonMainMenu)
         Me.Controls.Add(Me.txtLog)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.MainMenuStrip = Me.gMonMainMenu
         Me.MinimizeBox = False
