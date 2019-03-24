@@ -77,13 +77,13 @@ Partial Class frmSettings
         Me.chkMonitorOnStartup = New System.Windows.Forms.CheckBox()
         Me.pnlInterface = New System.Windows.Forms.Panel()
         Me.grpInterfaceOptions = New System.Windows.Forms.GroupBox()
+        Me.btnPreviewTheme_HighlightSec = New System.Windows.Forms.Button()
+        Me.btnPreviewTheme_Highlight = New System.Windows.Forms.Button()
+        Me.btnPreviewTheme_BaseSec = New System.Windows.Forms.Button()
+        Me.btnPreviewTheme_Base = New System.Windows.Forms.Button()
         Me.chkAutoHideLog = New System.Windows.Forms.CheckBox()
         Me.cboThemeSelection = New System.Windows.Forms.ComboBox()
         Me.lblThemeSelection = New System.Windows.Forms.Label()
-        Me.btnPrevBase = New System.Windows.Forms.Button()
-        Me.btnPrevBaseSec = New System.Windows.Forms.Button()
-        Me.btnPrevHighlight = New System.Windows.Forms.Button()
-        Me.btnPrevHighlightSec = New System.Windows.Forms.Button()
         Me.grpFolderOptions.SuspendLayout()
         Me.grp7zGeneral.SuspendLayout()
         Me.pnlBackup.SuspendLayout()
@@ -643,10 +643,10 @@ Partial Class frmSettings
         '
         'grpInterfaceOptions
         '
-        Me.grpInterfaceOptions.Controls.Add(Me.btnPrevHighlightSec)
-        Me.grpInterfaceOptions.Controls.Add(Me.btnPrevHighlight)
-        Me.grpInterfaceOptions.Controls.Add(Me.btnPrevBaseSec)
-        Me.grpInterfaceOptions.Controls.Add(Me.btnPrevBase)
+        Me.grpInterfaceOptions.Controls.Add(Me.btnPreviewTheme_HighlightSec)
+        Me.grpInterfaceOptions.Controls.Add(Me.btnPreviewTheme_Highlight)
+        Me.grpInterfaceOptions.Controls.Add(Me.btnPreviewTheme_BaseSec)
+        Me.grpInterfaceOptions.Controls.Add(Me.btnPreviewTheme_Base)
         Me.grpInterfaceOptions.Controls.Add(Me.chkAutoHideLog)
         Me.grpInterfaceOptions.Controls.Add(Me.cboThemeSelection)
         Me.grpInterfaceOptions.Controls.Add(Me.lblThemeSelection)
@@ -656,6 +656,46 @@ Partial Class frmSettings
         Me.grpInterfaceOptions.TabIndex = 1
         Me.grpInterfaceOptions.TabStop = False
         Me.grpInterfaceOptions.Text = "Interface Options"
+        '
+        'btnPreviewTheme_HighlightSec
+        '
+        Me.btnPreviewTheme_HighlightSec.Enabled = False
+        Me.btnPreviewTheme_HighlightSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPreviewTheme_HighlightSec.Location = New System.Drawing.Point(312, 23)
+        Me.btnPreviewTheme_HighlightSec.Name = "btnPreviewTheme_HighlightSec"
+        Me.btnPreviewTheme_HighlightSec.Size = New System.Drawing.Size(21, 21)
+        Me.btnPreviewTheme_HighlightSec.TabIndex = 7
+        Me.btnPreviewTheme_HighlightSec.UseVisualStyleBackColor = True
+        '
+        'btnPreviewTheme_Highlight
+        '
+        Me.btnPreviewTheme_Highlight.Enabled = False
+        Me.btnPreviewTheme_Highlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPreviewTheme_Highlight.Location = New System.Drawing.Point(285, 23)
+        Me.btnPreviewTheme_Highlight.Name = "btnPreviewTheme_Highlight"
+        Me.btnPreviewTheme_Highlight.Size = New System.Drawing.Size(21, 21)
+        Me.btnPreviewTheme_Highlight.TabIndex = 6
+        Me.btnPreviewTheme_Highlight.UseVisualStyleBackColor = True
+        '
+        'btnPreviewTheme_BaseSec
+        '
+        Me.btnPreviewTheme_BaseSec.Enabled = False
+        Me.btnPreviewTheme_BaseSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPreviewTheme_BaseSec.Location = New System.Drawing.Point(258, 23)
+        Me.btnPreviewTheme_BaseSec.Name = "btnPreviewTheme_BaseSec"
+        Me.btnPreviewTheme_BaseSec.Size = New System.Drawing.Size(21, 21)
+        Me.btnPreviewTheme_BaseSec.TabIndex = 5
+        Me.btnPreviewTheme_BaseSec.UseVisualStyleBackColor = True
+        '
+        'btnPreviewTheme_Base
+        '
+        Me.btnPreviewTheme_Base.Enabled = False
+        Me.btnPreviewTheme_Base.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPreviewTheme_Base.Location = New System.Drawing.Point(230, 23)
+        Me.btnPreviewTheme_Base.Name = "btnPreviewTheme_Base"
+        Me.btnPreviewTheme_Base.Size = New System.Drawing.Size(21, 21)
+        Me.btnPreviewTheme_Base.TabIndex = 4
+        Me.btnPreviewTheme_Base.UseVisualStyleBackColor = True
         '
         'chkAutoHideLog
         '
@@ -684,46 +724,6 @@ Partial Class frmSettings
         Me.lblThemeSelection.Size = New System.Drawing.Size(90, 13)
         Me.lblThemeSelection.TabIndex = 0
         Me.lblThemeSelection.Text = "Theme Selection:"
-        '
-        'btnPrevBase
-        '
-        Me.btnPrevBase.Enabled = False
-        Me.btnPrevBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrevBase.Location = New System.Drawing.Point(230, 23)
-        Me.btnPrevBase.Name = "btnPrevBase"
-        Me.btnPrevBase.Size = New System.Drawing.Size(21, 21)
-        Me.btnPrevBase.TabIndex = 4
-        Me.btnPrevBase.UseVisualStyleBackColor = True
-        '
-        'btnPrevBaseSec
-        '
-        Me.btnPrevBaseSec.Enabled = False
-        Me.btnPrevBaseSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrevBaseSec.Location = New System.Drawing.Point(258, 23)
-        Me.btnPrevBaseSec.Name = "btnPrevBaseSec"
-        Me.btnPrevBaseSec.Size = New System.Drawing.Size(21, 21)
-        Me.btnPrevBaseSec.TabIndex = 5
-        Me.btnPrevBaseSec.UseVisualStyleBackColor = True
-        '
-        'btnPrevHighlight
-        '
-        Me.btnPrevHighlight.Enabled = False
-        Me.btnPrevHighlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrevHighlight.Location = New System.Drawing.Point(285, 23)
-        Me.btnPrevHighlight.Name = "btnPrevHighlight"
-        Me.btnPrevHighlight.Size = New System.Drawing.Size(21, 21)
-        Me.btnPrevHighlight.TabIndex = 6
-        Me.btnPrevHighlight.UseVisualStyleBackColor = True
-        '
-        'btnPrevHighlightSec
-        '
-        Me.btnPrevHighlightSec.Enabled = False
-        Me.btnPrevHighlightSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrevHighlightSec.Location = New System.Drawing.Point(312, 23)
-        Me.btnPrevHighlightSec.Name = "btnPrevHighlightSec"
-        Me.btnPrevHighlightSec.Size = New System.Drawing.Size(21, 21)
-        Me.btnPrevHighlightSec.TabIndex = 7
-        Me.btnPrevHighlightSec.UseVisualStyleBackColor = True
         '
         'frmSettings
         '
@@ -836,8 +836,8 @@ Partial Class frmSettings
     Friend WithEvents chkAutoHideLog As CheckBox
     Friend WithEvents cboThemeSelection As ComboBox
     Friend WithEvents lblThemeSelection As Label
-    Friend WithEvents btnPrevBase As Button
-    Friend WithEvents btnPrevHighlightSec As Button
-    Friend WithEvents btnPrevHighlight As Button
-    Friend WithEvents btnPrevBaseSec As Button
+    Friend WithEvents btnPreviewTheme_Base As Button
+    Friend WithEvents btnPreviewTheme_HighlightSec As Button
+    Friend WithEvents btnPreviewTheme_Highlight As Button
+    Friend WithEvents btnPreviewTheme_BaseSec As Button
 End Class

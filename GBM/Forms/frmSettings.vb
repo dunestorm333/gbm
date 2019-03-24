@@ -465,10 +465,10 @@ Public Class frmSettings
 
         'Only set the theme once it has been defined.
         If oThemeEngine.bThemeHasBeenDefined Then
-            btnPrevBase.BackColor = oThemeEngine.ColorBase
-            btnPrevBaseSec.BackColor = oThemeEngine.ColorBaseSecondary
-            btnPrevHighlight.BackColor = oThemeEngine.ColorHighlight
-            btnPrevHighlightSec.BackColor = oThemeEngine.ColorHighlightSecondary
+            btnPreviewTheme_Base.BackColor = oThemeEngine.ColorBase
+            btnPreviewTheme_BaseSec.BackColor = oThemeEngine.ColorBaseSecondary
+            btnPreviewTheme_Highlight.BackColor = oThemeEngine.ColorHighlight
+            btnPreviewTheme_HighlightSec.BackColor = oThemeEngine.ColorHighlightSecondary
         End If
     End Sub
 End Class

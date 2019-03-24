@@ -968,7 +968,7 @@ Public Class frmMain
             mgrPath.RemoteDatabaseLocation = oSettings.BackupFolder
             SetupSyncWatcher()
             LoadGameSettings()
-            LoadInterfaceState()
+            LoadCustomUISettings()
         End If
         ResumeScan()
     End Sub
@@ -1567,7 +1567,7 @@ Public Class frmMain
         ResetGameInfo()
 
         'Initialise and sets interface customizations
-        LoadInterfaceState()
+        LoadCustomUISettings()
     End Sub
 
     Private Function BuildChildProcesses() As Integer
@@ -1631,7 +1631,7 @@ Public Class frmMain
         End Try
     End Sub
 
-    Private Sub LoadInterfaceState()
+    Private Sub LoadCustomUISettings()
 #Region "Auto-hide log"
         If oSettings.AutoHideLog Then
             Size = New Size(0, 0)
