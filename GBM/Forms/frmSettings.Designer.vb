@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmSettings
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmSettings
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.chkAutoSaveLog = New System.Windows.Forms.CheckBox()
         Me.btnOptionalFields = New System.Windows.Forms.Button()
@@ -77,13 +77,13 @@ Partial Class frmSettings
         Me.chkMonitorOnStartup = New System.Windows.Forms.CheckBox()
         Me.pnlInterface = New System.Windows.Forms.Panel()
         Me.grpInterfaceOptions = New System.Windows.Forms.GroupBox()
-        Me.btnPreviewTheme_HighlightSec = New System.Windows.Forms.Button()
-        Me.btnPreviewTheme_Highlight = New System.Windows.Forms.Button()
         Me.btnPreviewTheme_BaseSec = New System.Windows.Forms.Button()
         Me.btnPreviewTheme_Base = New System.Windows.Forms.Button()
         Me.chkAutoHideLog = New System.Windows.Forms.CheckBox()
         Me.cboThemeSelection = New System.Windows.Forms.ComboBox()
         Me.lblThemeSelection = New System.Windows.Forms.Label()
+        Me.lblPreviewTheme_HighlightSec = New System.Windows.Forms.Label()
+        Me.lblPreviewTheme_Highlight = New System.Windows.Forms.Label()
         Me.grpFolderOptions.SuspendLayout()
         Me.grp7zGeneral.SuspendLayout()
         Me.pnlBackup.SuspendLayout()
@@ -643,8 +643,8 @@ Partial Class frmSettings
         '
         'grpInterfaceOptions
         '
-        Me.grpInterfaceOptions.Controls.Add(Me.btnPreviewTheme_HighlightSec)
-        Me.grpInterfaceOptions.Controls.Add(Me.btnPreviewTheme_Highlight)
+        Me.grpInterfaceOptions.Controls.Add(Me.lblPreviewTheme_Highlight)
+        Me.grpInterfaceOptions.Controls.Add(Me.lblPreviewTheme_HighlightSec)
         Me.grpInterfaceOptions.Controls.Add(Me.btnPreviewTheme_BaseSec)
         Me.grpInterfaceOptions.Controls.Add(Me.btnPreviewTheme_Base)
         Me.grpInterfaceOptions.Controls.Add(Me.chkAutoHideLog)
@@ -652,38 +652,18 @@ Partial Class frmSettings
         Me.grpInterfaceOptions.Controls.Add(Me.lblThemeSelection)
         Me.grpInterfaceOptions.Location = New System.Drawing.Point(6, 12)
         Me.grpInterfaceOptions.Name = "grpInterfaceOptions"
-        Me.grpInterfaceOptions.Size = New System.Drawing.Size(354, 82)
+        Me.grpInterfaceOptions.Size = New System.Drawing.Size(354, 259)
         Me.grpInterfaceOptions.TabIndex = 1
         Me.grpInterfaceOptions.TabStop = False
         Me.grpInterfaceOptions.Text = "Interface Options"
-        '
-        'btnPreviewTheme_HighlightSec
-        '
-        Me.btnPreviewTheme_HighlightSec.Enabled = False
-        Me.btnPreviewTheme_HighlightSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPreviewTheme_HighlightSec.Location = New System.Drawing.Point(312, 23)
-        Me.btnPreviewTheme_HighlightSec.Name = "btnPreviewTheme_HighlightSec"
-        Me.btnPreviewTheme_HighlightSec.Size = New System.Drawing.Size(21, 21)
-        Me.btnPreviewTheme_HighlightSec.TabIndex = 7
-        Me.btnPreviewTheme_HighlightSec.UseVisualStyleBackColor = True
-        '
-        'btnPreviewTheme_Highlight
-        '
-        Me.btnPreviewTheme_Highlight.Enabled = False
-        Me.btnPreviewTheme_Highlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPreviewTheme_Highlight.Location = New System.Drawing.Point(285, 23)
-        Me.btnPreviewTheme_Highlight.Name = "btnPreviewTheme_Highlight"
-        Me.btnPreviewTheme_Highlight.Size = New System.Drawing.Size(21, 21)
-        Me.btnPreviewTheme_Highlight.TabIndex = 6
-        Me.btnPreviewTheme_Highlight.UseVisualStyleBackColor = True
         '
         'btnPreviewTheme_BaseSec
         '
         Me.btnPreviewTheme_BaseSec.Enabled = False
         Me.btnPreviewTheme_BaseSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPreviewTheme_BaseSec.Location = New System.Drawing.Point(258, 23)
+        Me.btnPreviewTheme_BaseSec.Location = New System.Drawing.Point(12, 127)
         Me.btnPreviewTheme_BaseSec.Name = "btnPreviewTheme_BaseSec"
-        Me.btnPreviewTheme_BaseSec.Size = New System.Drawing.Size(21, 21)
+        Me.btnPreviewTheme_BaseSec.Size = New System.Drawing.Size(321, 86)
         Me.btnPreviewTheme_BaseSec.TabIndex = 5
         Me.btnPreviewTheme_BaseSec.UseVisualStyleBackColor = True
         '
@@ -691,16 +671,16 @@ Partial Class frmSettings
         '
         Me.btnPreviewTheme_Base.Enabled = False
         Me.btnPreviewTheme_Base.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPreviewTheme_Base.Location = New System.Drawing.Point(230, 23)
+        Me.btnPreviewTheme_Base.Location = New System.Drawing.Point(12, 52)
         Me.btnPreviewTheme_Base.Name = "btnPreviewTheme_Base"
-        Me.btnPreviewTheme_Base.Size = New System.Drawing.Size(21, 21)
+        Me.btnPreviewTheme_Base.Size = New System.Drawing.Size(321, 171)
         Me.btnPreviewTheme_Base.TabIndex = 4
         Me.btnPreviewTheme_Base.UseVisualStyleBackColor = True
         '
         'chkAutoHideLog
         '
         Me.chkAutoHideLog.AutoSize = True
-        Me.chkAutoHideLog.Location = New System.Drawing.Point(9, 56)
+        Me.chkAutoHideLog.Location = New System.Drawing.Point(12, 229)
         Me.chkAutoHideLog.Name = "chkAutoHideLog"
         Me.chkAutoHideLog.Size = New System.Drawing.Size(167, 17)
         Me.chkAutoHideLog.TabIndex = 3
@@ -713,7 +693,7 @@ Partial Class frmSettings
         Me.cboThemeSelection.FormattingEnabled = True
         Me.cboThemeSelection.Location = New System.Drawing.Point(110, 23)
         Me.cboThemeSelection.Name = "cboThemeSelection"
-        Me.cboThemeSelection.Size = New System.Drawing.Size(114, 21)
+        Me.cboThemeSelection.Size = New System.Drawing.Size(223, 21)
         Me.cboThemeSelection.TabIndex = 1
         '
         'lblThemeSelection
@@ -724,6 +704,24 @@ Partial Class frmSettings
         Me.lblThemeSelection.Size = New System.Drawing.Size(90, 13)
         Me.lblThemeSelection.TabIndex = 0
         Me.lblThemeSelection.Text = "Theme Selection:"
+        '
+        'lblPreviewTheme_HighlightSec
+        '
+        Me.lblPreviewTheme_HighlightSec.AutoSize = True
+        Me.lblPreviewTheme_HighlightSec.Location = New System.Drawing.Point(18, 58)
+        Me.lblPreviewTheme_HighlightSec.Name = "lblPreviewTheme_HighlightSec"
+        Me.lblPreviewTheme_HighlightSec.Size = New System.Drawing.Size(77, 13)
+        Me.lblPreviewTheme_HighlightSec.TabIndex = 8
+        Me.lblPreviewTheme_HighlightSec.Text = "Menu Bar Text"
+        '
+        'lblPreviewTheme_Highlight
+        '
+        Me.lblPreviewTheme_Highlight.AutoSize = True
+        Me.lblPreviewTheme_Highlight.Location = New System.Drawing.Point(18, 133)
+        Me.lblPreviewTheme_Highlight.Name = "lblPreviewTheme_Highlight"
+        Me.lblPreviewTheme_Highlight.Size = New System.Drawing.Size(49, 13)
+        Me.lblPreviewTheme_Highlight.TabIndex = 9
+        Me.lblPreviewTheme_Highlight.Text = "Log Text"
         '
         'frmSettings
         '
@@ -835,7 +833,7 @@ Partial Class frmSettings
     Friend WithEvents cboThemeSelection As ComboBox
     Friend WithEvents lblThemeSelection As Label
     Friend WithEvents btnPreviewTheme_Base As Button
-    Friend WithEvents btnPreviewTheme_HighlightSec As Button
-    Friend WithEvents btnPreviewTheme_Highlight As Button
     Friend WithEvents btnPreviewTheme_BaseSec As Button
+    Friend WithEvents lblPreviewTheme_HighlightSec As Label
+    Friend WithEvents lblPreviewTheme_Highlight As Label
 End Class
