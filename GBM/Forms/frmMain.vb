@@ -1008,12 +1008,9 @@ Public Class frmMain
 
     Private Sub OpenStartupWizard()
         Dim frm As New frmStartUpWizard()
-        frm.Settings = oSettings
-        PauseScan()
+        frm.Settings = New mgrSettings
         frm.ShowDialog()
-        LoadAndVerify()
         bFirstRun = False
-        ResumeScan()
     End Sub
 
     Private Sub OpenWebSite()
@@ -1757,8 +1754,8 @@ Public Class frmMain
 
     Private Sub VerifyGameDataPath()
         'Important: This function cannot access mgrPath for settings, as that will trigger a database creation and destroy the reason for this function
-        Dim sSettingsRoot As String = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) & "/gbm"
-        Dim sDBLocation As String = sSettingsRoot & "/gbm.s3db"
+        Dim sSettingsRoot As String = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) & Path.DirectorySeparatorChar & "gbm"
+        Dim sDBLocation As String = sSettingsRoot & Path.DirectorySeparatorChar & "gbm.s3db"
 
         If Not Directory.Exists(sSettingsRoot) Then
             Try
@@ -2208,6 +2205,7 @@ Public Class frmMain
         If bInitialLoad Then
             Try
                 VerifyGameDataPath()
+                If bFirstRun Then OpenStartupWizard()
                 LoadAndVerify()
             Catch ex As Exception
                 If mgrCommon.ShowMessage(frmMain_ErrorInitFailure, ex.Message & vbCrLf & ex.StackTrace, MsgBoxStyle.YesNo) = MsgBoxResult.No Then
@@ -2244,10 +2242,6 @@ Public Class frmMain
 
                 HandleScan()
                 CheckForNewBackups()
-            End If
-
-            If bFirstRun And Not bShutdown Then
-                OpenStartupWizard()
             End If
 
             bInitialLoad = False

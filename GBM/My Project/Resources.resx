@@ -137,7 +137,7 @@
     <value>This will rebuild all databases and shrink them to an optimal size.[BR]This should only be used if your gbm.s3db files are becoming very large.[BR][BR]Do you wish to continue?</value>
   </data>
   <data name="App_Copyright" xml:space="preserve">
-    <value>[PARAM] Michael J. Seiferling</value>
+    <value> 2014 - [PARAM] Michael J. Seiferling and Game Backup Monitor contributors</value>
   </data>
   <data name="frmMain_Exit" xml:space="preserve">
     <value>Are you sure you want to exit?  Your games will no longer be monitored.</value>
@@ -460,8 +460,8 @@
   <data name="frmGameManager_btnMarkAsRestored" xml:space="preserve">
     <value>&amp;Mark as Restored</value>
   </data>
-  <data name="frmGameManager_btnOpenBackupFile" xml:space="preserve">
-    <value>&amp;Open Backup File</value>
+  <data name="frmGameManager_btnOpenBackup" xml:space="preserve">
+    <value>&amp;Open Backup</value>
   </data>
   <data name="frmGameManager_btnOpenRestorePath" xml:space="preserve">
     <value>O&amp;pen Restore Path</value>
@@ -553,7 +553,7 @@
   <data name="frmGameManager_ErrorNoBackupData" xml:space="preserve">
     <value>The selected game(s) have no backup data or can't be restored with their current configuration.</value>
   </data>
-  <data name="frmGameManager_ErrorNoBackupExists" xml:space="preserve">
+  <data name="frmGameManager_ErrorNoBackupFileExists" xml:space="preserve">
     <value>The backup file does not exist.</value>
   </data>
   <data name="frmGameManager_ErrorNoItems" xml:space="preserve">
@@ -1136,7 +1136,7 @@
     <value>You must select a backup path to continue.</value>
   </data>
   <data name="frmStartUpWizard_ErrorNoFolderExists" xml:space="preserve">
-    <value>The folder you selected does not exist or is not a valid folder.</value>
+    <value>The selected backup location does not exist and could not be created.[BR][BR][PARAM]</value>
   </data>
   <data name="frmStartUpWizard_ExistingData" xml:space="preserve">
     <value>Existing data was detected in the backup folder and has been imported.</value>
@@ -1682,7 +1682,7 @@
     <value>You cannot choose a file located outside the current [PARAM] backup folder.</value>
   </data>
   <data name="frmGameManager_lblLimit" xml:space="preserve">
-    <value>Backup Limit</value>
+    <value>Backup Limit (0 = Unlimited)</value>
   </data>
   <data name="mgrBackup_BackupLimitExceeded" xml:space="preserve">
     <value>[PARAM] was automatically removed.</value>
@@ -1697,7 +1697,7 @@
     <value>This will delete all backup files for [PARAM].  This cannot be undone. [BR][BR]Do you want to continue?</value>
   </data>
   <data name="frmAddWizard_lblLimit" xml:space="preserve">
-    <value>Backup Limit</value>
+    <value>Backup Limit (0 = Unlimited)</value>
   </data>
   <data name="frmGameManager_Unknown" xml:space="preserve">
     <value>Unknown</value>
@@ -2412,5 +2412,20 @@
   </data>
   <data name="GBM_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\gbm.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frmGameManager_cmsOpenBackupFile" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="frmGameManager_cmsOpenBackupFolder" xml:space="preserve">
+    <value>F&amp;older</value>
+  </data>
+  <data name="frmGameManager_ErrorNoBackupFolderExists" xml:space="preserve">
+    <value>The backup folder does not exist.</value>
+  </data>
+  <data name="frmAddWizard_Summary_NoLimit" xml:space="preserve">
+    <value>Unlimited</value>
+  </data>
+  <data name="frmStartUpWizard_lblStep2Warning" xml:space="preserve">
+    <value>You cannot return to this step after clicking Next.  The Backup Location can be changed any time once Setup is complete.</value>
   </data>
 </root>
