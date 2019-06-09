@@ -79,7 +79,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to [PARAM] Michael J. Seiferling.
+        '''  Looks up a localized string similar to  2014 - [PARAM] Michael J. Seiferling and Game Backup Monitor contributors.
         '''</summary>
         Friend ReadOnly Property App_Copyright() As String
             Get
@@ -547,7 +547,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Backup Limit.
+        '''  Looks up a localized string similar to Backup Limit (0 = Unlimited).
         '''</summary>
         Friend ReadOnly Property frmAddWizard_lblLimit() As String
             Get
@@ -741,6 +741,15 @@ Namespace My.Resources
         Friend ReadOnly Property frmAddWizard_Summary_Name() As String
             Get
                 Return ResourceManager.GetString("frmAddWizard_Summary_Name", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Unlimited.
+        '''</summary>
+        Friend ReadOnly Property frmAddWizard_Summary_NoLimit() As String
+            Get
+                Return ResourceManager.GetString("frmAddWizard_Summary_NoLimit", resourceCulture)
             End Get
         End Property
         
@@ -1654,11 +1663,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &amp;Open Backup File.
+        '''  Looks up a localized string similar to &amp;Open Backup.
         '''</summary>
-        Friend ReadOnly Property frmGameManager_btnOpenBackupFile() As String
+        Friend ReadOnly Property frmGameManager_btnOpenBackup() As String
             Get
-                Return ResourceManager.GetString("frmGameManager_btnOpenBackupFile", resourceCulture)
+                Return ResourceManager.GetString("frmGameManager_btnOpenBackup", resourceCulture)
             End Get
         End Property
         
@@ -1906,6 +1915,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to &amp;File.
+        '''</summary>
+        Friend ReadOnly Property frmGameManager_cmsOpenBackupFile() As String
+            Get
+                Return ResourceManager.GetString("frmGameManager_cmsOpenBackupFile", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to F&amp;older.
+        '''</summary>
+        Friend ReadOnly Property frmGameManager_cmsOpenBackupFolder() As String
+            Get
+                Return ResourceManager.GetString("frmGameManager_cmsOpenBackupFolder", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Are you sure you want to run a backup for [PARAM]?  This will close the form..
         '''</summary>
         Friend ReadOnly Property frmGameManager_ConfirmBackup() As String
@@ -2106,9 +2133,18 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized string similar to The backup file does not exist..
         '''</summary>
-        Friend ReadOnly Property frmGameManager_ErrorNoBackupExists() As String
+        Friend ReadOnly Property frmGameManager_ErrorNoBackupFileExists() As String
             Get
-                Return ResourceManager.GetString("frmGameManager_ErrorNoBackupExists", resourceCulture)
+                Return ResourceManager.GetString("frmGameManager_ErrorNoBackupFileExists", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to The backup folder does not exist..
+        '''</summary>
+        Friend ReadOnly Property frmGameManager_ErrorNoBackupFolderExists() As String
+            Get
+                Return ResourceManager.GetString("frmGameManager_ErrorNoBackupFolderExists", resourceCulture)
             End Get
         End Property
         
@@ -2383,7 +2419,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Backup Limit.
+        '''  Looks up a localized string similar to Backup Limit (0 = Unlimited).
         '''</summary>
         Friend ReadOnly Property frmGameManager_lblLimit() As String
             Get
@@ -5254,7 +5290,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to The folder you selected does not exist or is not a valid folder..
+        '''  Looks up a localized string similar to The selected backup location does not exist and could not be created.[BR][BR][PARAM].
         '''</summary>
         Friend ReadOnly Property frmStartUpWizard_ErrorNoFolderExists() As String
             Get
@@ -5331,6 +5367,15 @@ Namespace My.Resources
         Friend ReadOnly Property frmStartUpWizard_lblStep2Title() As String
             Get
                 Return ResourceManager.GetString("frmStartUpWizard_lblStep2Title", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to You cannot return to this step after clicking Next.  The Backup Location can be changed any time once Setup is complete..
+        '''</summary>
+        Friend ReadOnly Property frmStartUpWizard_lblStep2Warning() As String
+            Get
+                Return ResourceManager.GetString("frmStartUpWizard_lblStep2Warning", resourceCulture)
             End Get
         End Property
         
