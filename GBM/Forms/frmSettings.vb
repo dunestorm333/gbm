@@ -269,6 +269,9 @@ Public Class frmSettings
 
         oThemeItems.Add(New KeyValuePair(Of Integer, String)(0, frmSettings_cboThemeSelection_Light))
         oThemeItems.Add(New KeyValuePair(Of Integer, String)(1, frmSettings_cboThemeSelection_Dark))
+        oThemeItems.Add(New KeyValuePair(Of Integer, String)(2, frmSettings_cboThemeSelection_Crimson))
+        oThemeItems.Add(New KeyValuePair(Of Integer, String)(3, frmSettings_cboThemeSelection_Emerald))
+        oThemeItems.Add(New KeyValuePair(Of Integer, String)(4, frmSettings_cboThemeSelection_GBM))
 
         cboThemeSelection.DataSource = oThemeItems
 
@@ -461,6 +464,12 @@ Public Class frmSettings
         If cboThemeSelection.SelectedIndex = 0 Then
             oThemeEngine.SetTheme(cboThemeSelection.SelectedIndex)
         ElseIf cboThemeSelection.SelectedIndex = 1 Then
+            oThemeEngine.SetTheme(cboThemeSelection.SelectedIndex)
+        ElseIf cboThemeSelection.SelectedIndex = 2 Then
+            oThemeEngine.SetTheme(cboThemeSelection.SelectedIndex)
+        ElseIf cboThemeSelection.SelectedIndex = 3 Then
+            oThemeEngine.SetTheme(cboThemeSelection.SelectedIndex)
+        ElseIf cboThemeSelection.SelectedIndex = 4 Then
             oThemeEngine.SetTheme(cboThemeSelection.SelectedIndex)
         End If
 
