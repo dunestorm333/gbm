@@ -269,6 +269,9 @@ Public Class frmSettings
 
         oThemeItems.Add(New KeyValuePair(Of Integer, String)(0, frmSettings_cboThemeSelection_Light))
         oThemeItems.Add(New KeyValuePair(Of Integer, String)(1, frmSettings_cboThemeSelection_Dark))
+        oThemeItems.Add(New KeyValuePair(Of Integer, String)(2, frmSettings_cboThemeSelection_Crimson))
+        oThemeItems.Add(New KeyValuePair(Of Integer, String)(3, frmSettings_cboThemeSelection_Emerald))
+        oThemeItems.Add(New KeyValuePair(Of Integer, String)(4, frmSettings_cboThemeSelection_GBM))
 
         cboThemeSelection.DataSource = oThemeItems
 
@@ -462,14 +465,24 @@ Public Class frmSettings
             oThemeEngine.SetTheme(cboThemeSelection.SelectedIndex)
         ElseIf cboThemeSelection.SelectedIndex = 1 Then
             oThemeEngine.SetTheme(cboThemeSelection.SelectedIndex)
+        ElseIf cboThemeSelection.SelectedIndex = 2 Then
+            oThemeEngine.SetTheme(cboThemeSelection.SelectedIndex)
+        ElseIf cboThemeSelection.SelectedIndex = 3 Then
+            oThemeEngine.SetTheme(cboThemeSelection.SelectedIndex)
+        ElseIf cboThemeSelection.SelectedIndex = 4 Then
+            oThemeEngine.SetTheme(cboThemeSelection.SelectedIndex)
         End If
 
         'Only set the theme once it has been defined.
         If oThemeEngine.bThemeHasBeenDefined Then
             btnPreviewTheme_Base.BackColor = oThemeEngine.ColorBase
             btnPreviewTheme_BaseSec.BackColor = oThemeEngine.ColorBaseSecondary
-            btnPreviewTheme_Highlight.BackColor = oThemeEngine.ColorHighlight
-            btnPreviewTheme_HighlightSec.BackColor = oThemeEngine.ColorHighlightSecondary
+            lblPreviewTheme_Highlight.ForeColor = oThemeEngine.ColorHighlight
+            lblPreviewTheme_Highlight.BackColor = oThemeEngine.ColorBaseSecondary
+            lblPreviewTheme_HighlightSecTop.ForeColor = oThemeEngine.ColorHighlightSecondary
+            lblPreviewTheme_HighlightSecTop.BackColor = oThemeEngine.ColorBase
+            lblPreviewTheme_HighlightSecBottom.ForeColor = oThemeEngine.ColorHighlightSecondary
+            lblPreviewTheme_HighlightSecBottom.BackColor = oThemeEngine.ColorBase
         End If
     End Sub
 End Class

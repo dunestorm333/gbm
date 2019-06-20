@@ -70,6 +70,9 @@ Public Class mgrThemeEngine
     Public Enum eBaseTheme
         Light = 0
         Dark = 1
+        Crimson = 2
+        Emerald = 3
+        GBM = 4
     End Enum
 
     ''' <summary>
@@ -107,6 +110,52 @@ Public Class mgrThemeEngine
                     mgrThemeEngine_RGB_Light_HighlightSecondary)
 
                 _bThemeHasBeenDefined = True
+
+            Case eBaseTheme.Crimson
+                _ColorBase = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Crimson_Base)
+
+                _ColorBaseSecondary = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Crimson_BaseSecondary)
+
+                _ColorHighlight = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Crimson_Highlight)
+
+                _ColorHighlightSecondary = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Crimson_HighlightSecondary)
+
+                _bThemeHasBeenDefined = True
+
+            Case eBaseTheme.Emerald
+                _ColorBase = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Emerald_Base)
+
+                _ColorBaseSecondary = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Emerald_BaseSecondary)
+
+                _ColorHighlight = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Emerald_Highlight)
+
+                _ColorHighlightSecondary = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_Emerald_HighlightSecondary)
+
+                _bThemeHasBeenDefined = True
+
+            Case eBaseTheme.GBM
+                _ColorBase = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_GBM_Base)
+
+                _ColorBaseSecondary = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_GBM_BaseSecondary)
+
+                _ColorHighlight = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_GBM_Highlight)
+
+                _ColorHighlightSecondary = New ColorConverter().ConvertFromString(
+                    mgrThemeEngine_RGB_GBM_HighlightSecondary)
+
+                _bThemeHasBeenDefined = True
+
         End Select
     End Sub
 End Class

@@ -1649,8 +1649,8 @@ Public Class frmMain
         gMonMainMenu.BackColor = oThemeEngine.ColorBase
         gMonMainMenu.ForeColor = oThemeEngine.ColorHighlightSecondary
         gMonStatusStrip.BackColor = oThemeEngine.ColorBase
-        gMonStripTxtStatus.ForeColor = oThemeEngine.ColorHighlight
-        gMonStripStatusButton.ForeColor = oThemeEngine.ColorHighlight
+        gMonStripTxtStatus.ForeColor = oThemeEngine.ColorHighlightSecondary
+        gMonStripStatusButton.ForeColor = oThemeEngine.ColorHighlightSecondary
 
         'Text Labels
         lblGameTitle.ForeColor = oThemeEngine.ColorHighlight

@@ -2428,4 +2428,49 @@
   <data name="frmStartUpWizard_lblStep2Warning" xml:space="preserve">
     <value>You cannot return to this step after clicking Next.  The Backup Location can be changed any time once Setup is complete.</value>
   </data>
+  <data name="frmSettings_cboThemeSelection_Crimson" xml:space="preserve">
+    <value>Crimson</value>
+  </data>
+  <data name="frmSettings_cboThemeSelection_Emerald" xml:space="preserve">
+    <value>Emerald</value>
+  </data>
+  <data name="frmSettings_cboThemeSelection_GBM" xml:space="preserve">
+    <value>GBM</value>
+  </data>
+  <data name="mgrThemeEngine_RGB_Crimson_Base" xml:space="preserve">
+    <value>209,10,10</value>
+  </data>
+  <data name="mgrThemeEngine_RGB_Crimson_BaseSecondary" xml:space="preserve">
+    <value>119,0,0</value>
+  </data>
+  <data name="mgrThemeEngine_RGB_Crimson_Highlight" xml:space="preserve">
+    <value>255,255,255</value>
+  </data>
+  <data name="mgrThemeEngine_RGB_Crimson_HighlightSecondary" xml:space="preserve">
+    <value>255,255,255</value>
+  </data>
+  <data name="mgrThemeEngine_RGB_Emerald_Base" xml:space="preserve">
+    <value>22,193,114</value>
+  </data>
+  <data name="mgrThemeEngine_RGB_Emerald_BaseSecondary" xml:space="preserve">
+    <value>33,79,75</value>
+  </data>
+  <data name="mgrThemeEngine_RGB_Emerald_Highlight" xml:space="preserve">
+    <value>255,255,255</value>
+  </data>
+  <data name="mgrThemeEngine_RGB_Emerald_HighlightSecondary" xml:space="preserve">
+    <value>33,79,75</value>
+  </data>
+  <data name="mgrThemeEngine_RGB_GBM_Base" xml:space="preserve">
+    <value>23,190,187</value>
+  </data>
+  <data name="mgrThemeEngine_RGB_GBM_BaseSecondary" xml:space="preserve">
+    <value>14,124,123</value>
+  </data>
+  <data name="mgrThemeEngine_RGB_GBM_Highlight" xml:space="preserve">
+    <value>255,255,255</value>
+  </data>
+  <data name="mgrThemeEngine_RGB_GBM_HighlightSecondary" xml:space="preserve">
+    <value>7,66,65</value>
+  </data>
 </root>
