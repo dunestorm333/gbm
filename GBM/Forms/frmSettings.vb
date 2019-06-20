@@ -479,8 +479,10 @@ Public Class frmSettings
             btnPreviewTheme_BaseSec.BackColor = oThemeEngine.ColorBaseSecondary
             lblPreviewTheme_Highlight.ForeColor = oThemeEngine.ColorHighlight
             lblPreviewTheme_Highlight.BackColor = oThemeEngine.ColorBaseSecondary
-            lblPreviewTheme_HighlightSec.ForeColor = oThemeEngine.ColorHighlightSecondary
-            lblPreviewTheme_HighlightSec.BackColor = oThemeEngine.ColorBase
+            lblPreviewTheme_HighlightSecTop.ForeColor = oThemeEngine.ColorHighlightSecondary
+            lblPreviewTheme_HighlightSecTop.BackColor = oThemeEngine.ColorBase
+            lblPreviewTheme_HighlightSecBottom.ForeColor = oThemeEngine.ColorHighlightSecondary
+            lblPreviewTheme_HighlightSecBottom.BackColor = oThemeEngine.ColorBase
         End If
     End Sub
 End Class

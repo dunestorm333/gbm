@@ -2459,7 +2459,7 @@
     <value>255,255,255</value>
   </data>
   <data name="mgrThemeEngine_RGB_Emerald_HighlightSecondary" xml:space="preserve">
-    <value>0,0,0</value>
+    <value>33,79,75</value>
   </data>
   <data name="mgrThemeEngine_RGB_GBM_Base" xml:space="preserve">
     <value>23,190,187</value>
@@ -2471,6 +2471,6 @@
     <value>255,255,255</value>
   </data>
   <data name="mgrThemeEngine_RGB_GBM_HighlightSecondary" xml:space="preserve">
-    <value>0,0,0</value>
+    <value>7,66,65</value>
   </data>
 </root>

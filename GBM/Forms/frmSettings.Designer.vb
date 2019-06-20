@@ -77,13 +77,14 @@ Partial Class frmSettings
         Me.chkMonitorOnStartup = New System.Windows.Forms.CheckBox()
         Me.pnlInterface = New System.Windows.Forms.Panel()
         Me.grpInterfaceOptions = New System.Windows.Forms.GroupBox()
+        Me.lblPreviewTheme_Highlight = New System.Windows.Forms.Label()
+        Me.lblPreviewTheme_HighlightSecTop = New System.Windows.Forms.Label()
         Me.btnPreviewTheme_BaseSec = New System.Windows.Forms.Button()
         Me.btnPreviewTheme_Base = New System.Windows.Forms.Button()
         Me.chkAutoHideLog = New System.Windows.Forms.CheckBox()
         Me.cboThemeSelection = New System.Windows.Forms.ComboBox()
         Me.lblThemeSelection = New System.Windows.Forms.Label()
-        Me.lblPreviewTheme_HighlightSec = New System.Windows.Forms.Label()
-        Me.lblPreviewTheme_Highlight = New System.Windows.Forms.Label()
+        Me.lblPreviewTheme_HighlightSecBottom = New System.Windows.Forms.Label()
         Me.grpFolderOptions.SuspendLayout()
         Me.grp7zGeneral.SuspendLayout()
         Me.pnlBackup.SuspendLayout()
@@ -643,8 +644,9 @@ Partial Class frmSettings
         '
         'grpInterfaceOptions
         '
+        Me.grpInterfaceOptions.Controls.Add(Me.lblPreviewTheme_HighlightSecBottom)
         Me.grpInterfaceOptions.Controls.Add(Me.lblPreviewTheme_Highlight)
-        Me.grpInterfaceOptions.Controls.Add(Me.lblPreviewTheme_HighlightSec)
+        Me.grpInterfaceOptions.Controls.Add(Me.lblPreviewTheme_HighlightSecTop)
         Me.grpInterfaceOptions.Controls.Add(Me.btnPreviewTheme_BaseSec)
         Me.grpInterfaceOptions.Controls.Add(Me.btnPreviewTheme_Base)
         Me.grpInterfaceOptions.Controls.Add(Me.chkAutoHideLog)
@@ -652,16 +654,34 @@ Partial Class frmSettings
         Me.grpInterfaceOptions.Controls.Add(Me.lblThemeSelection)
         Me.grpInterfaceOptions.Location = New System.Drawing.Point(6, 12)
         Me.grpInterfaceOptions.Name = "grpInterfaceOptions"
-        Me.grpInterfaceOptions.Size = New System.Drawing.Size(354, 259)
+        Me.grpInterfaceOptions.Size = New System.Drawing.Size(354, 299)
         Me.grpInterfaceOptions.TabIndex = 1
         Me.grpInterfaceOptions.TabStop = False
         Me.grpInterfaceOptions.Text = "Interface Options"
+        '
+        'lblPreviewTheme_Highlight
+        '
+        Me.lblPreviewTheme_Highlight.AutoSize = True
+        Me.lblPreviewTheme_Highlight.Location = New System.Drawing.Point(18, 145)
+        Me.lblPreviewTheme_Highlight.Name = "lblPreviewTheme_Highlight"
+        Me.lblPreviewTheme_Highlight.Size = New System.Drawing.Size(49, 13)
+        Me.lblPreviewTheme_Highlight.TabIndex = 9
+        Me.lblPreviewTheme_Highlight.Text = "Log Text"
+        '
+        'lblPreviewTheme_HighlightSecTop
+        '
+        Me.lblPreviewTheme_HighlightSecTop.AutoSize = True
+        Me.lblPreviewTheme_HighlightSecTop.Location = New System.Drawing.Point(18, 58)
+        Me.lblPreviewTheme_HighlightSecTop.Name = "lblPreviewTheme_HighlightSecTop"
+        Me.lblPreviewTheme_HighlightSecTop.Size = New System.Drawing.Size(77, 13)
+        Me.lblPreviewTheme_HighlightSecTop.TabIndex = 8
+        Me.lblPreviewTheme_HighlightSecTop.Text = "Menu Bar Text"
         '
         'btnPreviewTheme_BaseSec
         '
         Me.btnPreviewTheme_BaseSec.Enabled = False
         Me.btnPreviewTheme_BaseSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPreviewTheme_BaseSec.Location = New System.Drawing.Point(12, 127)
+        Me.btnPreviewTheme_BaseSec.Location = New System.Drawing.Point(12, 139)
         Me.btnPreviewTheme_BaseSec.Name = "btnPreviewTheme_BaseSec"
         Me.btnPreviewTheme_BaseSec.Size = New System.Drawing.Size(321, 86)
         Me.btnPreviewTheme_BaseSec.TabIndex = 5
@@ -673,14 +693,14 @@ Partial Class frmSettings
         Me.btnPreviewTheme_Base.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPreviewTheme_Base.Location = New System.Drawing.Point(12, 52)
         Me.btnPreviewTheme_Base.Name = "btnPreviewTheme_Base"
-        Me.btnPreviewTheme_Base.Size = New System.Drawing.Size(321, 171)
+        Me.btnPreviewTheme_Base.Size = New System.Drawing.Size(321, 194)
         Me.btnPreviewTheme_Base.TabIndex = 4
         Me.btnPreviewTheme_Base.UseVisualStyleBackColor = True
         '
         'chkAutoHideLog
         '
         Me.chkAutoHideLog.AutoSize = True
-        Me.chkAutoHideLog.Location = New System.Drawing.Point(12, 229)
+        Me.chkAutoHideLog.Location = New System.Drawing.Point(12, 275)
         Me.chkAutoHideLog.Name = "chkAutoHideLog"
         Me.chkAutoHideLog.Size = New System.Drawing.Size(167, 17)
         Me.chkAutoHideLog.TabIndex = 3
@@ -705,23 +725,14 @@ Partial Class frmSettings
         Me.lblThemeSelection.TabIndex = 0
         Me.lblThemeSelection.Text = "Theme Selection:"
         '
-        'lblPreviewTheme_HighlightSec
+        'lblPreviewTheme_HighlightSecBottom
         '
-        Me.lblPreviewTheme_HighlightSec.AutoSize = True
-        Me.lblPreviewTheme_HighlightSec.Location = New System.Drawing.Point(18, 58)
-        Me.lblPreviewTheme_HighlightSec.Name = "lblPreviewTheme_HighlightSec"
-        Me.lblPreviewTheme_HighlightSec.Size = New System.Drawing.Size(77, 13)
-        Me.lblPreviewTheme_HighlightSec.TabIndex = 8
-        Me.lblPreviewTheme_HighlightSec.Text = "Menu Bar Text"
-        '
-        'lblPreviewTheme_Highlight
-        '
-        Me.lblPreviewTheme_Highlight.AutoSize = True
-        Me.lblPreviewTheme_Highlight.Location = New System.Drawing.Point(18, 133)
-        Me.lblPreviewTheme_Highlight.Name = "lblPreviewTheme_Highlight"
-        Me.lblPreviewTheme_Highlight.Size = New System.Drawing.Size(49, 13)
-        Me.lblPreviewTheme_Highlight.TabIndex = 9
-        Me.lblPreviewTheme_Highlight.Text = "Log Text"
+        Me.lblPreviewTheme_HighlightSecBottom.AutoSize = True
+        Me.lblPreviewTheme_HighlightSecBottom.Location = New System.Drawing.Point(15, 229)
+        Me.lblPreviewTheme_HighlightSecBottom.Name = "lblPreviewTheme_HighlightSecBottom"
+        Me.lblPreviewTheme_HighlightSecBottom.Size = New System.Drawing.Size(80, 13)
+        Me.lblPreviewTheme_HighlightSecBottom.TabIndex = 10
+        Me.lblPreviewTheme_HighlightSecBottom.Text = "Status Bar Text"
         '
         'frmSettings
         '
@@ -834,6 +845,7 @@ Partial Class frmSettings
     Friend WithEvents lblThemeSelection As Label
     Friend WithEvents btnPreviewTheme_Base As Button
     Friend WithEvents btnPreviewTheme_BaseSec As Button
-    Friend WithEvents lblPreviewTheme_HighlightSec As Label
+    Friend WithEvents lblPreviewTheme_HighlightSecTop As Label
     Friend WithEvents lblPreviewTheme_Highlight As Label
+    Friend WithEvents lblPreviewTheme_HighlightSecBottom As Label
 End Class

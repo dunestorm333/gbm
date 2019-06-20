@@ -7043,7 +7043,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 0,0,0.
+        '''  Looks up a localized string similar to 33,79,75.
         '''</summary>
         Friend ReadOnly Property mgrThemeEngine_RGB_Emerald_HighlightSecondary() As String
             Get
@@ -7079,7 +7079,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 0,0,0.
+        '''  Looks up a localized string similar to 7,66,65.
         '''</summary>
         Friend ReadOnly Property mgrThemeEngine_RGB_GBM_HighlightSecondary() As String
             Get
