@@ -2450,10 +2450,10 @@
     <value>255,255,255</value>
   </data>
   <data name="mgrThemeEngine_RGB_Emerald_Base" xml:space="preserve">
-    <value>80,200,120</value>
+    <value>22,193,114</value>
   </data>
   <data name="mgrThemeEngine_RGB_Emerald_BaseSecondary" xml:space="preserve">
-    <value>77,137,105</value>
+    <value>33,79,75</value>
   </data>
   <data name="mgrThemeEngine_RGB_Emerald_Highlight" xml:space="preserve">
     <value>255,255,255</value>
@@ -2462,13 +2462,13 @@
     <value>0,0,0</value>
   </data>
   <data name="mgrThemeEngine_RGB_GBM_Base" xml:space="preserve">
-    <value>48,179,219</value>
+    <value>23,190,187</value>
   </data>
   <data name="mgrThemeEngine_RGB_GBM_BaseSecondary" xml:space="preserve">
-    <value>66,203,244</value>
+    <value>14,124,123</value>
   </data>
   <data name="mgrThemeEngine_RGB_GBM_Highlight" xml:space="preserve">
-    <value>0,0,0</value>
+    <value>255,255,255</value>
   </data>
   <data name="mgrThemeEngine_RGB_GBM_HighlightSecondary" xml:space="preserve">
     <value>0,0,0</value>

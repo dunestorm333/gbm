@@ -7016,7 +7016,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 80,200,120.
+        '''  Looks up a localized string similar to 22,193,114.
         '''</summary>
         Friend ReadOnly Property mgrThemeEngine_RGB_Emerald_Base() As String
             Get
@@ -7025,7 +7025,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 77,137,105.
+        '''  Looks up a localized string similar to 33,79,75.
         '''</summary>
         Friend ReadOnly Property mgrThemeEngine_RGB_Emerald_BaseSecondary() As String
             Get
@@ -7052,7 +7052,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 48,179,219.
+        '''  Looks up a localized string similar to 23,190,187.
         '''</summary>
         Friend ReadOnly Property mgrThemeEngine_RGB_GBM_Base() As String
             Get
@@ -7061,7 +7061,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 66,203,244.
+        '''  Looks up a localized string similar to 14,124,123.
         '''</summary>
         Friend ReadOnly Property mgrThemeEngine_RGB_GBM_BaseSecondary() As String
             Get
@@ -7070,7 +7070,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 0,0,0.
+        '''  Looks up a localized string similar to 255,255,255.
         '''</summary>
         Friend ReadOnly Property mgrThemeEngine_RGB_GBM_Highlight() As String
             Get
