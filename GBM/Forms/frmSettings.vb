@@ -475,14 +475,21 @@ Public Class frmSettings
 
         'Only set the theme once it has been defined.
         If oThemeEngine.bThemeHasBeenDefined Then
+            'Base Theme
             btnPreviewTheme_Base.BackColor = oThemeEngine.ColorBase
             btnPreviewTheme_BaseSec.BackColor = oThemeEngine.ColorBaseSecondary
+            'Log Text
             lblPreviewTheme_Highlight.ForeColor = oThemeEngine.ColorHighlight
             lblPreviewTheme_Highlight.BackColor = oThemeEngine.ColorBaseSecondary
+            'Menu Bar Text
             lblPreviewTheme_HighlightSecTop.ForeColor = oThemeEngine.ColorHighlightSecondary
             lblPreviewTheme_HighlightSecTop.BackColor = oThemeEngine.ColorBase
+            'Status Bar Text
             lblPreviewTheme_HighlightSecBottom.ForeColor = oThemeEngine.ColorHighlightSecondary
             lblPreviewTheme_HighlightSecBottom.BackColor = oThemeEngine.ColorBase
+            'Game Title Text
+            lblPreviewTheme_HighlightSec.ForeColor = oThemeEngine.ColorHighlightSecondary
+            lblPreviewTheme_HighlightSec.BackColor = oThemeEngine.ColorBase
         End If
     End Sub
 End Class

@@ -1653,13 +1653,13 @@ Public Class frmMain
         gMonStripStatusButton.ForeColor = oThemeEngine.ColorHighlightSecondary
 
         'Text Labels
-        lblGameTitle.ForeColor = oThemeEngine.ColorHighlight
-        lblStatus1.ForeColor = oThemeEngine.ColorHighlight
-        lblStatus2.ForeColor = oThemeEngine.ColorHighlight
-        lblStatus3.ForeColor = oThemeEngine.ColorHighlight
-        lblTimeSpent.ForeColor = oThemeEngine.ColorHighlight
-        lblLastActionTitle.ForeColor = oThemeEngine.ColorHighlight
-        lblLastAction.ForeColor = oThemeEngine.ColorHighlight
+        lblGameTitle.ForeColor = oThemeEngine.ColorHighlightSecondary
+        lblStatus1.ForeColor = oThemeEngine.ColorHighlightSecondary
+        lblStatus2.ForeColor = oThemeEngine.ColorHighlightSecondary
+        lblStatus3.ForeColor = oThemeEngine.ColorHighlightSecondary
+        lblTimeSpent.ForeColor = oThemeEngine.ColorHighlightSecondary
+        lblLastActionTitle.ForeColor = oThemeEngine.ColorHighlightSecondary
+        lblLastAction.ForeColor = oThemeEngine.ColorHighlightSecondary
 
         'Output Log
         txtLog.BackColor = oThemeEngine.ColorBaseSecondary
