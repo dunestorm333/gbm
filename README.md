@@ -1,3 +1,5 @@
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) ***dunestorm333:*** Due to reliability issues in syncing the database with cloud storage providers, I will no longer be supporting GBM. For optimal reliability, architecturally the database should be hosted on a dedicated instance rather than trusting your sync software of choice to make that decision.
+
 ***dunestorm333:*** My branch simply contains an updated icon set, I plan to make a couple other UI changes in the future.
 
 # [Game Backup Monitor](http://mikemaximus.github.io/gbm-web/)
